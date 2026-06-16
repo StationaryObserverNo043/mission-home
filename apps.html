@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GADGET HANGAR｜地球防衛ガジェット格納庫</title>
+
+<meta name="description" content="恒点観測員043号が開発した地球防衛ガジェット群。診断・記録・防衛・観測、あらゆる任務に対応した装備一覧。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="GADGET HANGAR｜地球防衛ガジェット格納庫">
+<meta property="og:description" content="恒点観測員043号が開発した地球防衛ガジェット群。スマホ完結のブラウザアプリ一覧。">
+<meta property="og:url" content="https://stationaryobserverno043.github.io/mission-home/apps.html">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@teabreak_inv">
+<meta name="twitter:title" content="GADGET HANGAR｜地球防衛ガジェット格納庫">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #01040a;
+  --panel: #060d1a;
+  --panel2: #0a1628;
+  --border: #0e2040;
+  --border2: #1a3560;
+  --accent: #00e5ff;
+  --accent2: #7b61ff;
+  --text: #e8f4ff;
+  --dim: #4a6080;
+  --dim2: #2a4060;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.7;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* ── SCANLINE ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg, transparent, transparent 2px,
+    rgba(0,229,255,0.015) 2px, rgba(0,229,255,0.015) 4px
+  );
+  pointer-events: none;
+  z-index: 1000;
+}
+
+/* ── STARS ── */
+.stars { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
+.star {
+  position: absolute; border-radius: 50%; background: white;
+  animation: twinkle var(--d, 3s) infinite var(--delay, 0s);
+}
+@keyframes twinkle {
+  0%, 100% { opacity: var(--min, 0.1); }
+  50% { opacity: var(--max, 0.8); }
+}
+
+/* ── LAYOUT ── */
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── HEADER ── */
+.hangar-header {
+  padding: 48px 0 32px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Orbitron', monospace;
+  font-size: 9px;
+  color: var(--dim);
+  text-decoration: none;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  transition: color .2s, border-color .2s;
+}
+.back-link:hover { color: var(--accent); border-color: var(--accent); }
+
+.hangar-label {
+  font-family: 'Orbitron', monospace;
+  font-size: 9px;
+  color: var(--accent);
+  letter-spacing: 3px;
+  opacity: 0.7;
+  margin-bottom: 8px;
+}
+
+.hangar-title {
+  font-family: 'Orbitron', monospace;
+  font-size: clamp(18px, 5vw, 28px);
+  font-weight: 900;
+  color: var(--text);
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.hangar-jaco {
+  font-size: 12px;
+  color: var(--dim);
+  font-family: 'Orbitron', monospace;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.hangar-count {
+  display: inline-block;
+  font-family: 'Orbitron', monospace;
+  font-size: 10px;
+  color: var(--accent);
+  padding: 4px 14px;
+  border: 1px solid rgba(0,229,255,0.2);
+  letter-spacing: 2px;
+  margin-top: 8px;
+}
+
+/* ── GADGET GRID ── */
+.gadget-grid {
+  padding: 40px 0 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.gadget-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0;
+}
+
+/* ── GADGET CARD ── */
+.gadget-card {
+  display: block;
+  padding: 28px 0;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  transition: background .2s;
+}
+.gadget-card:hover { background: rgba(0,229,255,0.02); }
+
+.gadget-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.gadget-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+  width: 48px;
+  text-align: center;
+  padding-top: 2px;
+}
+
+.gadget-body { flex: 1; min-width: 0; }
+
+.gadget-name {
+  font-family: 'Orbitron', monospace;
+  font-size: clamp(13px, 3.5vw, 16px);
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.gadget-subtitle {
+  font-size: 11px;
+  color: var(--accent);
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  font-family: 'Orbitron', monospace;
+}
+
+.gadget-desc {
+  font-size: 13px;
+  color: #7a90a8;
+  line-height: 1.75;
+}
+
+.gadget-launch {
+  flex-shrink: 0;
+  align-self: center;
+  font-family: 'Orbitron', monospace;
+  font-size: 9px;
+  color: var(--accent);
+  border: 1px solid rgba(0,229,255,0.3);
+  padding: 8px 14px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  transition: background .2s, border-color .2s;
+}
+.gadget-card:hover .gadget-launch {
+  background: rgba(0,229,255,0.08);
+  border-color: var(--accent);
+}
+
+/* ── FOOTER ── */
+.hangar-footer {
+  border-top: 1px solid var(--border);
+  padding: 24px 0;
+  text-align: center;
+}
+.hangar-footer p {
+  font-family: 'Orbitron', monospace;
+  font-size: 8px;
+  color: var(--dim2);
+  letter-spacing: 2px;
+  line-height: 2;
+}
+
+/* ── J.A.C.O. BAR ── */
+#jaco-bar {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: #020210;
+  border-top: 2px solid #0e2040;
+  padding: 8px 16px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 12px;
+  color: #4a6080;
+  z-index: 800;
+  opacity: 0;
+  transition: opacity .3s;
+  pointer-events: none;
+}
+
+/* ── FADE IN ── */
+.fade-in { opacity: 0; transform: translateY(16px); transition: opacity .5s, transform .5s; }
+.fade-in.in { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<div class="stars" id="stars"></div>
+
+<!-- HEADER -->
+<header class="hangar-header">
+  <div class="container">
+    <a href="./index.html" class="back-link">← MISSION HOME へ帰還</a>
+    <div class="hangar-label">// 地球防衛ガジェット格納庫</div>
+    <h1 class="hangar-title">GADGET HANGAR</h1>
+    <div class="hangar-jaco">《J.A.C.O》：登録ガジェットを展開中——</div>
+    <div class="hangar-count" id="gadget-count">登録ガジェット数：6</div>
+  </div>
+</header>
+
+<!-- GADGET GRID -->
+<main>
+  <div class="container">
+    <div class="gadget-grid">
+
+      <div class="gadget-divider"></div>
+
+      <!-- B.E.A.R. -->
+      <a class="gadget-card fade-in" href="https://stationaryobserverno043.github.io/B.E.A.R/" target="_blank" rel="noopener">
+        <div class="gadget-inner">
+          <div class="gadget-icon">🐻</div>
+          <div class="gadget-body">
+            <div class="gadget-name">B.E.A.R.</div>
+            <div class="gadget-subtitle">BIOLOGICAL ENTITY ALERT RADAR</div>
+            <div class="gadget-desc">生体反応警戒レーダー。近隣の熊出没情報をワンタップで検索。</div>
+          </div>
+          <div class="gadget-launch">起動 ▷</div>
+        </div>
+      </a>
+
+      <div class="gadget-divider"></div>
+
+      <!-- NOISE -->
+      <a class="gadget-card fade-in" href="https://stationaryobserverno043.github.io/NOISE/" target="_blank" rel="noopener">
+        <div class="gadget-inner">
+          <div class="gadget-icon">📡</div>
+          <div class="gadget-body">
+            <div class="gadget-name">NOISE</div>
+            <div class="gadget-subtitle">LANGUAGE OBSERVATION UNIT</div>
+            <div class="gadget-desc">言葉の観測装置。意味になる前の断片を観測。</div>
+          </div>
+          <div class="gadget-launch">起動 ▷</div>
+        </div>
+      </a>
+
+      <div class="gadget-divider"></div>
+
+      <!-- SNS星タイプ診断 -->
+      <a class="gadget-card fade-in" href="https://stationaryobserverno043.github.io/hoshi-shindan/hoshi_shindan.html" target="_blank" rel="noopener">
+        <div class="gadget-inner">
+          <div class="gadget-icon">🪐</div>
+          <div class="gadget-body">
+            <div class="gadget-name">SNS星タイプ診断</div>
+            <div class="gadget-subtitle">SNS PERSONALITY ANALYZER</div>
+            <div class="gadget-desc">SNS人格を星として解析。</div>
+          </div>
+          <div class="gadget-launch">起動 ▷</div>
+        </div>
+      </a>
+
+      <div class="gadget-divider"></div>
+
+      <!-- 星の性格診断 -->
+      <a class="gadget-card fade-in" href="https://stationaryobserverno043.github.io/hoshi-shindan/hoshi_seikaku_shindan.html" target="_blank" rel="noopener">
+        <div class="gadget-inner">
+          <div class="gadget-icon">🌌</div>
+          <div class="gadget-body">
+            <div class="gadget-name">星の性格診断</div>
+            <div class="gadget-subtitle">GALAXY MATRIX ANALYZER</div>
+            <div class="gadget-desc">銀河のマトリクスで、あなたの内側を解析。</div>
+          </div>
+          <div class="gadget-launch">起動 ▷</div>
+        </div>
+      </a>
+
+      <div class="gadget-divider"></div>
+
+      <!-- 星ヲ巡る旅 -->
+      <a class="gadget-card fade-in" href="https://stationaryobserverno043.github.io/hoshi_monogatari/hoshi_monogatari.html" target="_blank" rel="noopener">
+        <div class="gadget-inner">
+          <div class="gadget-icon">🌟</div>
+          <div class="gadget-body">
+            <div class="gadget-name">星ヲ巡る旅</div>
+            <div class="gadget-subtitle">STELLAR MEMORY LOG</div>
+            <div class="gadget-desc">日々のメモが、夜空の星になる。</div>
+          </div>
+          <div class="gadget-launch">起動 ▷</div>
+        </div>
+      </a>
+
+      <div class="gadget-divider"></div>
+
+      <!-- MEMORIES ODYSSEY -->
+      <a class="gadget-card fade-in" href="https://stationaryobserverno043.github.io/memories_odyssey/" target="_blank" rel="noopener">
+        <div class="gadget-inner">
+          <div class="gadget-icon">🎮</div>
+          <div class="gadget-body">
+            <div class="gadget-name">MEMORIES ODYSSEY</div>
+            <div class="gadget-subtitle">CONSTELLATION ADVENTURE</div>
+            <div class="gadget-desc">想いのカケラを集めて、星座という名の物語を紡ぐ。</div>
+          </div>
+          <div class="gadget-launch">起動 ▷</div>
+        </div>
+      </a>
+
+      <div class="gadget-divider"></div>
+
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="hangar-footer">
+  <div class="container">
+    <p>GADGET HANGAR — 地球防衛ガジェット格納庫<br>
+    MISSION EARTH GUARD ／ 恒点観測員043号<br>
+    NASAには通報しないでネ⚠️</p>
+  </div>
+</footer>
+
+<div id="jaco-bar"></div>
+
+<script>
+// ── 星空生成 ──
+const starsEl = document.getElementById('stars');
+for (let i = 0; i < 120; i++) {
+  const s = document.createElement('div');
+  s.className = 'star';
+  const size = Math.random() * 2 + 0.5;
+  s.style.cssText = `
+    width:${size}px; height:${size}px;
+    top:${Math.random()*100}%; left:${Math.random()*100}%;
+    --d:${2+Math.random()*4}s; --delay:${Math.random()*4}s;
+    --min:${0.05+Math.random()*0.1}; --max:${0.4+Math.random()*0.5};
+  `;
+  starsEl.appendChild(s);
+}
+
+// ── フェードイン ──
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+}, { threshold: 0.15 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// ── J.A.C.O.アナウンス ──
+const jacoBar = document.getElementById('jaco-bar');
+
+function typeWriter(text, cb) {
+  let i = 0;
+  jacoBar.textContent = '';
+  jacoBar.style.opacity = '1';
+  const iv = setInterval(() => {
+    jacoBar.textContent += text[i++];
+    if (i >= text.length) {
+      clearInterval(iv);
+      setTimeout(() => {
+        jacoBar.style.opacity = '0';
+        if (cb) setTimeout(cb, 400);
+      }, 2000);
+    }
+  }, 38);
+}
+
+// ページ読み込み時アナウンス
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    typeWriter('《J.A.C.O》：地球防衛ガジェット格納庫へようこそ——');
+  }, 800);
+});
+</script>
+
+</body>
+</html>
