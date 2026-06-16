@@ -1,0 +1,38 @@
+{
+  "name": "地球侵略阻止ミッション｜グレイ=ニートゥ=ヒマジン",
+  "short_name": "地球侵略阻止ミッション",
+  "description": "発信コンサル・AI活用相談・言語化サポート。作業療法士×WEBライター×SF作家が「あなたらしさ」を一緒に観測します。",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#01040a",
+  "theme_color": "#01040a",
+  "lang": "ja",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
