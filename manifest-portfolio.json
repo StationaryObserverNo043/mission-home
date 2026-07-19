@@ -1,0 +1,38 @@
+{
+  "name": "観測する、ヒマジン。｜地球侵略阻止ミッション ポートフォリオ",
+  "short_name": "ヒマジン ポートフォリオ",
+  "description": "『未知との遭遇』——知らない自分、人、新しい技術との出会いを、AI活用とライティングで「自分らしさ」の発見に変えるサポートをしています。",
+  "start_url": "./portfolio.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fff6e6",
+  "theme_color": "#fff6e6",
+  "lang": "ja",
+  "icons": [
+    {
+      "src": "icon-portfolio-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-portfolio-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icon-portfolio-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-portfolio-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
