@@ -1,0 +1,1718 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>観測する、ヒマジン。｜ポートフォリオ</title>
+<meta name="description" content="『未知との遭遇』——知らない自分、人、新しい技術との出会いを、AI活用とライティングで「自分らしさ」の発見に変えるサポートをしています。">
+
+<!-- OGP（SNS共有時のプレビュー） -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://stationaryobserverno043.github.io/mission-home/portfolio.html?obs=043">
+<meta property="og:title" content="観測する、ヒマジン。｜ポートフォリオ">
+<meta property="og:description" content="『未知との遭遇』——知らない自分、人、新しい技術との出会いを、AI活用とライティングで「自分らしさ」の発見に変えるサポートをしています。">
+<meta property="og:image" content="https://stationaryobserverno043.github.io/mission-home/ogp_portfolio.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@teabreak_inv">
+<meta name="twitter:title" content="観測する、ヒマジン。｜ポートフォリオ">
+<meta name="twitter:description" content="『未知との遭遇』——知らない自分、人、新しい技術との出会いを、AI活用とライティングで「自分らしさ」の発見に変えるサポートをしています。">
+<meta name="twitter:image" content="https://stationaryobserverno043.github.io/mission-home/ogp_portfolio.png">
+
+<!-- ホーム画面アイコン（iOS / Android） -->
+<link rel="manifest" href="manifest-portfolio.json">
+<link rel="apple-touch-icon" sizes="180x180" href="icon-portfolio-180.png">
+<link rel="apple-touch-icon" sizes="152x152" href="icon-portfolio-152.png">
+<link rel="apple-touch-icon" sizes="120x120" href="icon-portfolio-120.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-portfolio-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icon-portfolio-32.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="交信端末｜PF043">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#fff6e6">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Bangers&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+<style>
+/* ── RESET ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%;}
+
+/* ── モーション低減設定への対応 ── */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+    scroll-behavior:auto !important;
+  }
+  html{scroll-behavior:auto;}
+}
+:root{
+  --bg:#fff6e6; --bg2:#ffecc8;
+  --text:#241130; --dim:#6e4f7a; --dimmer:#8f76a0;
+  --border:#f0cbe0;
+  --accent:#d4127a;
+}
+body{background:var(--bg);color:var(--text);font-family:'Noto Sans JP',sans-serif;overflow-x:hidden;line-height:1.7;
+  -webkit-user-select:none;user-select:none;-webkit-touch-callout:none;}
+
+/* コピーしてほしい箇所だけ選択・長押しコピーを許可（星エフェクトのタップ判定とは干渉しないゾーンのみ） */
+.copyable{-webkit-user-select:text;user-select:text;-webkit-touch-callout:default;}
+
+/* ハーフトーン・ドット(コミック印刷風の網点) */
+body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.22;
+  background-image:radial-gradient(rgba(255,47,146,.14) 1.4px,transparent 1.4px);
+  background-size:16px 16px;}
+
+/* 星 Canvas */
+#stars{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0;transition:opacity 2s ease;}
+#stars.on{opacity:1;}
+#stars-fx{position:fixed;inset:0;z-index:9999;pointer-events:none;}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(255,246,230,.9);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 24px;height:52px;}
+.nav-logo{font-family:'Noto Sans JP',sans-serif;font-size:13px;color:var(--accent);letter-spacing:1.5px;text-decoration:none;}
+.nav-links{display:flex;list-style:none;}
+.nav-links a{font-family:'Noto Sans JP',sans-serif;font-size:12px;color:var(--dimmer);text-decoration:none;
+  letter-spacing:1.5px;padding:0 12px;line-height:52px;transition:color .2s;}
+.nav-links a:hover{color:var(--accent);}
+.nav-back{font-family:'Noto Sans JP',sans-serif;font-size:12px;color:var(--dimmer);text-decoration:none;
+  letter-spacing:1.5px;transition:color .2s;}
+.nav-back:hover{color:var(--accent);}
+.nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;
+  width:32px;height:32px;background:none;border:none;cursor:pointer;padding:0;}
+.nav-toggle span{display:block;width:20px;height:1.5px;background:var(--dim);transition:transform .25s ease,opacity .2s ease;}
+.nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0;}
+.nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+.nav-mobile-menu{position:fixed;top:52px;left:0;right:0;z-index:99;
+  background:rgba(255,246,230,.97);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+  display:flex;flex-direction:column;
+  max-height:0;overflow:hidden;
+  transition:max-height .3s ease;}
+.nav-mobile-menu.open{max-height:320px;}
+.nav-mobile-menu a{font-family:'Noto Sans JP',sans-serif;font-size:14px;color:var(--dim);
+  text-decoration:none;letter-spacing:2px;padding:16px 24px;
+  border-bottom:1px solid var(--border);}
+.nav-mobile-menu a:active{color:var(--accent);}
+@media(max-width:640px){
+  .nav-links{display:none;}
+  .nav-back{display:none;}
+  .nav-toggle{display:flex;}
+}
+
+/* ── LAYOUT ── */
+.wrap{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 24px;}
+section{padding:150px 0;position:relative;z-index:1;overflow:hidden;}
+section:not(#hero)::before{
+  content:'';position:absolute;top:0;left:0;width:100%;height:2px;
+  background:linear-gradient(90deg,transparent 5%,rgba(255,47,146,.45) 50%,transparent 95%);
+  z-index:2;pointer-events:none;
+}
+
+.sec-label{font-family:'Noto Sans JP',sans-serif;font-size:11px;color:var(--accent);letter-spacing:3px;opacity:.6;margin-bottom:8px;}
+.sec-divider{display:flex;align-items:center;gap:16px;margin:24px 0 64px;}
+#contact .sec-divider{margin-bottom:44px;}
+.sec-divider-line{flex:1;height:1px;background:var(--border);}
+.sec-divider-text{font-family:'Noto Sans JP',sans-serif;font-size:11px;color:var(--dimmer);letter-spacing:3px;white-space:nowrap;}
+
+/* ── フェードイン ── */
+.fade{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease;}
+.fade.in{opacity:1;transform:translateY(0);}
+
+/* ══════════════════════════════
+   PROLOGUE — スクロール連動スタガー導入
+   （sticky固定 + スクロール位置で1行ずつフォーカス）
+══════════════════════════════ */
+#prologue{
+  position:relative;
+  height:235vh; /* 4ステップ分のスクロール量 */
+  padding:0;
+  overflow:visible; /* section既定のoverflow:hiddenがsticky固定を無効化するのを回避 */
+}
+#prologue::before{content:none;}
+
+.prologue-sticky{
+  position:sticky;
+  top:0;
+  height:100svh;
+  overflow:hidden;
+}
+
+.prologue-step{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;justify-content:center;
+  text-align:center;
+  padding:0 24px;
+  opacity:0;
+  will-change:transform,opacity;
+  pointer-events:none;
+}
+.prologue-step.active{
+  pointer-events:auto;
+}
+
+.prologue-step p{
+  font-family:'Noto Sans JP',sans-serif;
+  font-weight:700;
+  font-size:clamp(16px,4vw,44px);
+  line-height:1.55;
+  color:var(--text);
+  margin:0;
+}
+
+.prologue-final p{margin:0;}
+.prologue-typo{
+  display:block;
+  font-family:'Noto Sans JP',sans-serif;
+  font-weight:900;
+  line-height:0.94;
+  letter-spacing:1px;
+  white-space:nowrap;
+}
+.prologue-typo-1{
+  font-size:clamp(56px,13vw,160px);
+  color:var(--text);
+  text-shadow:0 0 80px rgba(255,47,146,.08);
+}
+.prologue-typo-2{
+  font-size:clamp(48px,11vw,140px);
+  color:transparent;
+  -webkit-text-stroke:clamp(1px,0.15vw,2px) rgba(255,47,146,.5);
+  filter:drop-shadow(0 0 24px rgba(255,47,146,.15));
+  margin-top:clamp(4px,1vw,12px);
+}
+.prologue-typo-2 .dot{
+  color:var(--accent);
+  -webkit-text-fill-color:var(--accent);
+  -webkit-text-stroke:0;
+  filter:drop-shadow(0 0 12px rgba(255,47,146,.6));
+}
+.prologue-value{
+  display:block;
+  font-family:'Noto Sans JP',sans-serif;
+  font-size:15px;
+  font-weight:700;
+  color:#d4127a;
+  letter-spacing:1px;
+  margin-top:16px;
+  white-space:normal;
+}
+.prologue-value .x{
+  color:#8f76a0;
+  font-weight:400;
+  margin:0 6px;
+}
+
+/* プログレスドット（現在地がひと目でわかる導線）
+   .prologue-dots / .services-dots は同一スタイルのため共通セレクタに統合 */
+.prologue-dots,
+.services-dots{
+  position:absolute;
+  right:clamp(16px,3vw,32px);top:50%;
+  transform:translateY(-50%);
+  z-index:4;
+  display:flex;flex-direction:column;gap:10px;
+}
+.prologue-dots span,
+.services-dots span{
+  width:5px;height:5px;border-radius:50%;
+  background:var(--border);
+  transition:background .3s,transform .3s;
+}
+.prologue-dots span.active,
+.services-dots span.active{
+  background:var(--accent);
+  transform:scale(1.6);
+}
+
+@media(max-width:640px){
+  .prologue-typo-1{font-size:19vw;letter-spacing:-2px;}
+  .prologue-typo-2{font-size:16vw;letter-spacing:-2px;}
+  .prologue-dots,
+  .services-dots{display:none;}
+}
+
+@media (prefers-reduced-motion: reduce){
+  .prologue-step{transition:opacity .3s ease;}
+}
+
+/* ══════════════════════════════
+   SERVICES — 4つのサービスをスクロールで紹介
+   （PROLOGUEと同じ sticky + スクラブ方式）
+══════════════════════════════ */
+#services{
+  position:relative;
+  height:165vh; /* 3ステップ分のスクロール量 */
+  padding:0;
+  overflow:visible; /* section既定のoverflow:hiddenがsticky固定を無効化するのを回避 */
+}
+#services::before{content:none;}
+
+.services-sticky{
+  position:sticky;
+  top:0;
+  height:100svh;
+  overflow:hidden;
+}
+
+.svc-step{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;justify-content:center;
+  text-align:center;
+  padding:0 24px;
+  opacity:0;
+  will-change:transform,opacity;
+  pointer-events:none;
+}
+.svc-step.active{pointer-events:auto;}
+
+.svc-step-index{
+  font-family:'Noto Sans JP',sans-serif;
+  font-size:clamp(11px,1.6vw,12px);
+  color:var(--accent);
+  letter-spacing:4px;
+  margin-bottom:clamp(14px,2.6vw,22px);
+  opacity:.8;
+}
+.svc-step-title{
+  font-family:'Noto Sans JP',sans-serif;
+  font-weight:900;
+  font-size:clamp(34px,7.5vw,76px);
+  color:var(--text);
+  line-height:1.2;
+  margin-bottom:clamp(16px,2.8vw,26px);
+}
+.svc-step-tagline{
+  font-size:clamp(13px,2.2vw,17px);
+  color:var(--dim);
+  line-height:1.9;
+  max-width:32em;
+}
+.svc-step-read{
+  display:inline-block;font-family:'Noto Sans JP',sans-serif;
+  font-size:11px;letter-spacing:1px;color:var(--dim);
+  text-decoration:none;border-bottom:1px solid var(--border);
+  padding-bottom:2px;margin-top:clamp(14px,2.4vw,20px);
+}
+
+/* 実例へのリンク（note記事）: WORKSセクションの.read-linkと同じ「一行リンク」の型に統一 */
+.svc-embed .svc-step-read:hover{color:var(--accent);border-color:var(--accent);}
+/* 埋め込みがあるステップは、タイトル/タグラインをやや控えめにして1画面に収める */
+.svc-step.has-embed .svc-step-title{
+  font-size:clamp(24px,5vw,42px);
+  margin-bottom:clamp(10px,1.8vw,14px);
+}
+.svc-step.has-embed .svc-step-tagline{
+  font-size:clamp(12px,1.8vw,15px);
+}
+
+/* ══════════════════════════════
+   HERO — 巨大タイポグラフィ完全版
+══════════════════════════════ */
+#hero{
+  position:relative;
+  min-height:78svh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  overflow:hidden;
+  padding:52px 0 0; /* nav分 */
+}
+
+/* グリッド線背景 */
+#hero::before{
+  content:'';
+  position:absolute;inset:0;z-index:0;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(255,47,146,.018) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,47,146,.018) 1px,transparent 1px);
+  background-size:72px 72px;
+}
+
+/* ── 巨大アウトラインテキスト（背景装飾） ── */
+#hero-outline{
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  z-index:2;
+  pointer-events:none;
+  user-select:none;
+  font-family:'Bangers','Mochiy Pop One','Noto Sans JP',cursive;
+  font-weight:900;
+  font-size:clamp(140px,28vw,340px);
+  line-height:0.82;
+  white-space:nowrap;
+  color:transparent;
+  -webkit-text-stroke:1px rgba(255,47,146,.08);
+  letter-spacing:-6px;
+  text-align:center;
+  will-change:transform;
+  opacity:0;
+  animation:fadeIn 1s ease 0.1s forwards;
+}
+
+/* ── 中央コンテンツ ── */
+#hero-content{
+  position:relative;z-index:3;
+  padding:0 clamp(20px,5vw,64px);
+}
+
+/* コードネーム */
+.hero-code{
+  font-family:'Noto Sans JP',sans-serif;
+  font-size:clamp(11px,1.2vw,12px);
+  color:var(--dimmer);
+  letter-spacing:4px;
+  display:block;
+  margin-bottom:clamp(16px,3vw,28px);
+  opacity:0;
+  animation:fadeIn .6s ease .2s forwards;
+}
+
+/* ── メインキャッチ ── */
+.hero-typo{
+  display:block;
+  position:relative;
+  font-family:'Noto Sans JP',sans-serif;
+  font-weight:900;
+  line-height:0.94;
+  letter-spacing:1px;
+  white-space:nowrap;
+  /* 意図的に画面幅を超える */
+  margin-left:clamp(-16px,-2vw,-8px);
+  opacity:0;
+}
+/* 「観測する、」 — 塗りつぶし白 */
+.hero-typo-1{
+  font-size:clamp(56px,13vw,160px);
+  color:var(--text);
+  animation:slideInLeft .9s cubic-bezier(.16,1,.3,1) .35s forwards;
+  text-shadow:0 0 80px rgba(255,47,146,.08);
+}
+/* 「ヒマジン。」 — アウトラインのみ */
+.hero-typo-2{
+  font-size:clamp(48px,11vw,140px);
+  color:transparent;
+  -webkit-text-stroke:clamp(1px,0.15vw,2px) rgba(255,47,146,.5);
+  filter:drop-shadow(0 0 24px rgba(255,47,146,.15));
+  animation:slideInLeft .9s cubic-bezier(.16,1,.3,1) .5s forwards;
+  margin-top:clamp(4px,1vw,12px);
+}
+/* 「。」だけシアン塗り */
+.hero-typo-2 .dot{
+  color:var(--accent);
+  -webkit-text-fill-color:var(--accent);
+  -webkit-text-stroke:0;
+  filter:drop-shadow(0 0 12px rgba(255,47,146,.6));
+}
+
+/* サブライン */
+.hero-sub-row{
+  display:inline-flex;align-items:center;gap:clamp(10px,1.6vw,14px);
+  margin-top:clamp(20px,4vw,40px);
+  padding:clamp(8px,1.4vw,11px) clamp(14px,2.4vw,18px);
+  border:1px solid rgba(110,79,122,.3);
+  border-radius:999px;
+  background:rgba(110,79,122,.05);
+  opacity:0;
+  animation:fadeUp .7s ease .65s forwards;
+}
+.hero-sub-bar{
+  width:6px;height:6px;border-radius:50%;
+  background:var(--dim);flex-shrink:0;
+  box-shadow:0 0 8px rgba(110,79,122,.5);
+}
+.hero-sub-text{
+  font-size:clamp(12px,1.7vw,14.5px);
+  font-weight:700;
+  color:var(--text);letter-spacing:.06em;
+}
+
+/* タグライン */
+.hero-tagline{
+  font-family:'Noto Sans JP',sans-serif;
+  font-size:clamp(11px,1.6vw,15px);
+  font-weight:700;
+  color:var(--accent);letter-spacing:1px;
+  line-height:1.7;
+  display:block;
+  max-width:26em;
+  margin-top:clamp(10px,1.8vw,18px);
+  opacity:0;
+  animation:fadeIn .7s ease .8s forwards;
+}
+
+/* 直感的に伝わる説明文 */
+
+/* CTA */
+.hero-cta-row{
+  margin-top:clamp(32px,6vw,56px);
+  display:flex;align-items:center;gap:clamp(16px,3vw,32px);
+  flex-wrap:wrap;
+  opacity:0;
+  animation:fadeUp .7s ease .95s forwards;
+}
+.hero-cta{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:'Noto Sans JP',sans-serif;font-size:11px;
+  color:var(--accent);
+  border:1px solid rgba(255,47,146,.4);
+  padding:clamp(12px,2vw,16px) clamp(20px,3vw,32px);
+  text-decoration:none;letter-spacing:2px;
+  transition:background .25s,border-color .25s;
+  -webkit-tap-highlight-color:transparent;
+  position:relative;overflow:hidden;
+}
+.hero-cta::before{
+  content:'';position:absolute;
+  top:0;left:-100%;width:100%;height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,47,146,.08),transparent);
+  transition:left .5s ease;
+}
+.hero-cta:hover::before{left:100%;}
+.hero-cta:hover{background:rgba(255,47,146,.06);border-color:var(--accent);}
+
+.hero-cta.primary{
+  background:var(--accent);color:#fff;border-color:var(--accent);
+}
+.hero-cta.primary:hover{background:rgba(212,18,122,.85);}
+
+.hero-cta.secondary{
+  color:var(--dim);border-color:var(--border);
+}
+.hero-cta.secondary:hover{border-color:var(--dim);background:rgba(110,79,122,.06);}
+
+.hero-scroll-hint{
+  font-family:'Noto Sans JP',sans-serif;
+  font-size:11px;color:var(--dimmer);letter-spacing:3px;
+}
+
+/* ══════════════════════════════
+   QUICK JUMP FAB — Prologue/Hero/Servicesの演出をスキップして
+   実績・料金へ直接ジャンプできる常設導線（課題1の対策）
+══════════════════════════════ */
+.quick-jump-fab{
+  position:fixed;
+  right:clamp(14px,3vw,24px);
+  bottom:clamp(14px,3vw,24px);
+  z-index:120;
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--accent);color:#fff;
+  font-family:'Noto Sans JP',sans-serif;
+  font-size:13px;font-weight:700;letter-spacing:.02em;
+  padding:12px 18px;border-radius:999px;
+  text-decoration:none;
+  box-shadow:0 4px 18px rgba(212,18,122,.35);
+  opacity:0;transform:translateY(10px);
+  transition:opacity .4s ease,transform .4s ease,background .2s ease;
+  pointer-events:none;
+}
+.quick-jump-fab.visible{opacity:1;transform:translateY(0);pointer-events:auto;}
+.quick-jump-fab:hover{background:rgba(212,18,122,.88);}
+.quick-jump-fab-icon{font-size:14px;}
+@media(max-width:640px){
+  .quick-jump-fab{font-size:12px;padding:10px 16px;}
+}
+@media (prefers-reduced-motion: reduce){
+  .quick-jump-fab{transition:opacity .2s ease;}
+}
+
+/* スクロールインジケーター */
+.hero-scroll{
+  position:absolute;bottom:28px;right:clamp(20px,4vw,48px);
+  z-index:3;
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+  opacity:0;animation:fadeIn 1s ease 1.1s forwards;
+}
+.hero-scroll-line{
+  width:1px;height:36px;
+  background:linear-gradient(to bottom,var(--dimmer),transparent);
+  animation:scrollPulse 2s ease-in-out infinite;
+}
+@keyframes scrollPulse{0%,100%{opacity:.2;}50%{opacity:.7;}}
+
+/* ── ANIMATIONS ── */
+@keyframes slideInLeft{
+  from{opacity:0;transform:translateX(-40px);}
+  to{opacity:1;transform:translateX(0);}
+}
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(14px);}
+  to{opacity:1;transform:translateY(0);}
+}
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+
+/* HEROのモバイル巨大化（意図的にはみ出させる） */
+@media(max-width:640px){
+  #hero-outline{font-size:40vw;letter-spacing:-4px;}
+  .hero-typo-1{font-size:19vw;letter-spacing:-2px;margin-left:-4vw;}
+  .hero-typo-2{font-size:16vw;letter-spacing:-2px;margin-left:-4vw;}
+  .prologue-typo-1{font-size:19vw;letter-spacing:-2px;}
+  .prologue-typo-2{font-size:16vw;letter-spacing:-2px;}
+}
+
+/* ══════════════════════════════
+   STATS — note累計ビュー・WEBアプリ公開数（スプレッドシート連携）
+══════════════════════════════ */
+.stats-strip{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:1px;
+  background:var(--border);border:1px solid var(--border);
+}
+.stats-strip .stat-item{background:var(--bg);padding:32px 20px;text-align:center;}
+.stats-strip .stat-num{
+  font-family:'Noto Sans JP',sans-serif;
+  font-weight:900;
+  font-size:clamp(30px,5.5vw,44px);color:var(--accent);line-height:1;
+}
+.stats-strip .stat-unit{font-size:14px;color:var(--dimmer);margin-left:2px;}
+.stats-strip .stat-label{font-size:12px;color:var(--dim);margin-top:10px;letter-spacing:.04em;}
+.stats-strip .stat-since{font-size:10px;color:var(--dimmer);margin-top:4px;letter-spacing:.03em;}
+@media(max-width:480px){.stats-strip{grid-template-columns:1fr;}}
+
+/* ══════════════════════════════
+   SERVICES
+══════════════════════════════ */
+.svc-intro{
+  font-size:clamp(12px,2vw,14px);color:var(--dim);line-height:2;
+  max-width:640px;margin:0 auto 40px;text-align:center;
+}
+@keyframes floatDrift{
+  0%,100%{transform:translateY(0) rotate(0deg);}
+  50%{transform:translateY(-9px) rotate(4deg);}
+}
+
+/* ループテキスト */
+.loop-wrap{overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  padding:14px 0;background:linear-gradient(180deg,var(--bg),var(--bg2) 30%,var(--bg2) 70%,var(--bg));margin-top:1px;}
+.loop-track{display:flex;white-space:nowrap;animation:loopScroll 22s linear infinite;}
+.loop-track span{font-family:'Noto Sans JP',sans-serif;font-size:11px;
+  color:var(--dimmer);letter-spacing:3px;padding:0 32px;flex-shrink:0;}
+@keyframes loopScroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+/* セクション別・専用ループ（各セクションごとに固有のアクセントカラー） */
+.sec-loop-wrap{
+  overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  padding:12px 0;background:linear-gradient(180deg,var(--bg),var(--bg2) 30%,var(--bg2) 70%,var(--bg));
+}
+.sec-loop-track{display:flex;white-space:nowrap;animation:loopScroll 24s linear infinite;}
+.sec-loop-track.reverse{animation-direction:reverse;}
+.sec-loop-track span{
+  font-family:'Noto Sans JP',sans-serif;font-size:11px;font-weight:700;
+  letter-spacing:3px;padding:0 26px;flex-shrink:0;
+}
+.sec-loop-track.green span{color:var(--dim);}
+.sec-loop-track.cyan span{color:var(--accent);}
+
+/* フレーズ・マーキー帯（サイトを貫く一言。斜めに傾けて切断面を作る） */
+.phrase-loop-wrap{
+  overflow:hidden;background:linear-gradient(180deg,var(--bg),var(--bg2) 40%);
+  border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  padding:16px 0;margin:0 0 -1px;position:relative;z-index:1;
+}
+.phrase-loop-track{display:inline-flex;white-space:nowrap;animation:loopScroll 30s linear infinite;}
+.phrase-loop-track span{
+  font-family:'Noto Sans JP',sans-serif;font-weight:700;
+  font-size:clamp(13px,2.2vw,19px);letter-spacing:2px;
+  color:var(--dim);padding:0 24px;flex-shrink:0;
+  text-shadow:0 0 14px rgba(255,47,146,.25);
+}
+.phrase-loop-track span.phrase-en{
+  font-weight:400;font-size:clamp(11px,1.2vw,12px);
+  letter-spacing:3px;color:var(--dimmer);text-shadow:none;
+}
+.phrase-loop-track span.phrase-cipher{
+  font-family:'Noto Sans JP',monospace;
+  color:var(--accent);letter-spacing:3px;
+  text-shadow:0 0 14px rgba(255,47,146,.3);
+}
+
+/* ══════════════════════════════
+   WORKS
+══════════════════════════════ */
+#works .works-grid.results-grid{grid-template-columns:repeat(3,1fr);}
+.result-badge{display:inline-block;font-family:'Noto Sans JP',sans-serif;
+  font-size:11px;color:var(--dim);letter-spacing:2px;background:rgba(110,79,122,.08);
+  border:1px solid rgba(110,79,122,.25);padding:3px 8px;margin-bottom:10px;}
+#works .works-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+  background:var(--border);border:1px solid var(--border);
+  counter-reset:gadgetlog;}
+@media(max-width:768px){#works .works-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:400px){#works .works-grid{grid-template-columns:1fr;}}
+/* results-grid(LOG.01-03)は文章量が多いカードなので、
+   .works-gridより先に1カラム化しないと箱と文章の収まりが崩れる */
+@media(max-width:640px){#works .works-grid.results-grid{grid-template-columns:1fr;}}
+
+.work-card-links{display:flex;flex-direction:column;gap:14px;margin-top:14px;}
+.work-card-links a{font-family:'Noto Sans JP',sans-serif;font-size:11px;
+  letter-spacing:1px;text-decoration:none;}
+.work-card-links .read-link{color:var(--dim);border-bottom:1px solid var(--border);
+  padding:4px 0;width:fit-content;}
+.work-card-links .order-link{color:var(--dim);border:1px solid rgba(110,79,122,.35);
+  padding:10px 12px;text-align:center;background:rgba(110,79,122,.06);}
+.work-card-links .order-link:hover{background:rgba(110,79,122,.14);}
+
+.work-card{background:var(--bg);padding:28px 20px;text-decoration:none;display:block;
+  transition:background .2s,transform .3s ease;position:relative;overflow:hidden;
+  counter-increment:gadgetlog;}
+.work-card::before{
+  content:'LOG.' counter(gadgetlog,decimal-leading-zero);
+  position:absolute;top:10px;right:12px;
+  font-family:'Noto Sans JP',sans-serif;font-size:11px;letter-spacing:1px;
+  color:var(--dimmer);}
+.work-card:hover{background:var(--bg2);transform:translateY(-4px) rotate(-0.8deg);z-index:5;}
+.work-card:nth-child(even):hover{transform:translateY(-4px) rotate(0.8deg);z-index:5;}
+.work-card:hover .work-icon{transform:scale(1.2) rotate(10deg);animation-play-state:paused;}
+.work-icon{font-size:24px;margin-bottom:12px;display:block;transition:transform .3s ease;
+  animation:floatDrift 5.5s ease-in-out infinite;}
+.work-card:nth-child(3n+1) .work-icon{animation-delay:.3s;}
+.work-card:nth-child(3n+2) .work-icon{animation-delay:1.4s;animation-duration:6.2s;}
+.work-card:nth-child(3n+3) .work-icon{animation-delay:.9s;animation-duration:4.8s;}
+.work-name{font-family:'Noto Sans JP',sans-serif;font-size:11px;color:var(--text);
+  letter-spacing:1px;margin-bottom:8px;font-weight:700;}
+.work-desc{font-size:11px;color:var(--dim);line-height:1.7;}
+.work-note{font-size:11px;color:var(--dimmer);line-height:1.6;margin-top:10px;
+  padding-top:10px;border-top:1px dashed var(--border);}
+
+/* ══════════════════════════════
+   PRICING — 料金を一箇所に集約（課題6の対策）
+══════════════════════════════ */
+.pricing-table{
+  border:1px solid var(--border);
+  background:var(--border);
+  display:flex;flex-direction:column;gap:1px;
+}
+.pricing-row{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  background:var(--bg);
+  padding:18px 22px;
+  text-decoration:none;
+  transition:background .2s ease;
+}
+.pricing-row:hover{background:var(--bg2);}
+.pricing-name{
+  font-size:clamp(12.5px,2vw,14px);color:var(--text);font-weight:700;
+  line-height:1.5;
+}
+.pricing-desc{
+  display:block;
+  font-size:11px;color:var(--dim);font-weight:400;margin-top:3px;
+}
+.pricing-price{
+  font-family:'Noto Sans JP',sans-serif;
+  font-size:clamp(15px,2.4vw,18px);color:var(--accent);font-weight:700;
+  white-space:nowrap;flex-shrink:0;
+}
+.pricing-price small{font-size:11px;color:var(--dimmer);font-family:'Noto Sans JP',sans-serif;}
+.pricing-price.free{color:var(--dim);font-size:14px;font-weight:600;}
+@media(max-width:480px){
+  .pricing-row{flex-direction:column;align-items:flex-start;gap:6px;}
+}
+
+/* ══════════════════════════════
+   ARCHIVE LOG — 代表記事一覧（noteの埋め込みを避け、一行リンクで一覧化）
+   pricing-table/pricing-rowと同じ型を踏襲し、視覚的な一貫性を保つ
+══════════════════════════════ */
+.article-table{
+  border:1px solid var(--border);
+  background:var(--border);
+  display:flex;flex-direction:column;gap:1px;
+}
+.article-row{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  background:var(--bg);
+  padding:18px 22px;
+  text-decoration:none;
+  transition:background .2s ease;
+}
+.article-row:hover{background:var(--bg2);}
+.article-name{
+  font-size:clamp(12.5px,2vw,14px);color:var(--text);font-weight:700;
+  line-height:1.5;
+}
+.article-desc{
+  display:block;
+  font-size:11px;color:var(--dim);font-weight:400;margin-top:3px;
+}
+.article-arrow{
+  font-family:'Noto Sans JP',sans-serif;
+  font-size:16px;color:var(--dimmer);flex-shrink:0;
+  transition:transform .25s ease,color .25s ease;
+}
+.article-row:hover .article-arrow{transform:translateX(4px);color:var(--accent);}
+@media(max-width:480px){
+  .article-row{flex-direction:column;align-items:flex-start;gap:6px;}
+}
+
+/* WORKS内の複数サブセクション（ARCHIVE LOG / GADGET HANGAR / FIELD RECORDS）間の区切り余白 */
+.subsec-break{margin-top:88px;}
+
+/* ══════════════════════════════
+   CONTACT
+══════════════════════════════ */
+#contact .contact-inner{text-align:center;}
+.contact-watermark{
+  position:relative;
+  z-index:-1;pointer-events:none;user-select:none;
+  font-family:'Noto Sans JP',sans-serif;font-weight:900;
+  font-size:clamp(28px,6vw,72px);line-height:1;
+  white-space:nowrap;letter-spacing:-2px;
+  color:transparent;-webkit-text-stroke:1px rgba(255,47,146,.07);
+  margin-bottom:clamp(20px,3.5vw,32px);
+}
+.contact-inner{position:relative;z-index:1;}
+.contact-catch{font-size:clamp(20px,4.5vw,36px);font-weight:700;line-height:1.65;margin-bottom:28px;}
+.contact-catch em{font-style:normal;color:var(--accent);}
+.contact-invite{font-size:clamp(14px,2.4vw,17px);font-weight:600;color:var(--text);
+  line-height:1.9;margin-bottom:44px;}
+
+.gate-cta{
+  display:flex;align-items:center;gap:16px;
+  max-width:420px;width:100%;
+  padding:26px 28px;margin:0 auto;
+  border:1px solid var(--border);
+  background:transparent;
+  text-decoration:none;position:relative;overflow:hidden;
+  transition:background .25s,border-color .25s,transform .3s ease;
+}
+.gate-cta::before{
+  content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;
+  background:linear-gradient(90deg,transparent,rgba(212,18,122,.08),transparent);
+  transition:left .5s ease;
+}
+.gate-cta:hover::before{left:100%;}
+.gate-cta:hover{border-color:var(--dimmer);transform:translateY(-2px);}
+.gate-cta-icon{
+  flex-shrink:0;width:8px;height:8px;border-radius:50%;
+  background:var(--dimmer);
+}
+.gate-cta-text{display:flex;flex-direction:column;gap:7px;text-align:left;flex:1;}
+.gate-cta-label{font-family:'Noto Sans JP',sans-serif;font-size:11px;color:var(--dimmer);letter-spacing:2px;}
+.gate-cta-main{font-family:'Noto Sans JP',sans-serif;font-size:17px;font-weight:900;color:var(--text);letter-spacing:1px;}
+.gate-cta-arrow{
+  margin-left:auto;flex-shrink:0;color:var(--dimmer);font-size:16px;
+  transition:transform .25s ease;
+}
+.gate-cta:hover .gate-cta-arrow{transform:translateX(4px);}
+.gate-cta--spaced{margin-top:20px;}
+.gate-cta--spaced-bottom{margin:20px auto 40px;}
+
+/* 主導線（お仕事のご相談）：塗りつぶしの本CTA */
+.gate-cta.primary{
+  border-color:var(--accent);
+  background:var(--accent);
+}
+.gate-cta.primary::before{background:linear-gradient(90deg,transparent,rgba(255,255,255,.12),transparent);}
+.gate-cta.primary:hover{background:rgba(212,18,122,.88);border-color:var(--accent);}
+.gate-cta.primary .gate-cta-icon{background:#fff;}
+.gate-cta.primary .gate-cta-label{color:rgba(255,255,255,.75);}
+.gate-cta.primary .gate-cta-main{color:#fff;}
+.gate-cta.primary .gate-cta-arrow{color:#fff;}
+
+/* ── FOOTER ── */
+footer{border-top:1px solid var(--border);padding:40px 0;text-align:center;position:relative;z-index:1;overflow:hidden;}
+.footer-giant{
+  font-family:'Noto Sans JP',sans-serif;font-weight:900;
+  font-size:clamp(28px,7vw,84px);letter-spacing:-1px;
+  white-space:nowrap;
+  color:transparent;-webkit-text-stroke:1px rgba(255,47,146,.08);
+  margin-bottom:24px;pointer-events:none;user-select:none;
+}
+.footer-logo{font-family:'Noto Sans JP',sans-serif;font-size:11px;color:var(--dimmer);letter-spacing:3px;margin-bottom:12px;}
+.footer-copy{font-size:11px;color:var(--dimmer);letter-spacing:1px;line-height:2.4;}
+.footer-copy a{color:var(--dimmer);text-decoration:none;font-family:'Noto Sans JP',sans-serif;
+  font-size:11px;letter-spacing:2px;transition:color .2s;}
+.footer-copy a:hover{color:var(--accent);}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+</style>
+</head>
+<body>
+
+<canvas id="stars" aria-hidden="true"></canvas>
+<canvas id="stars-fx" aria-hidden="true"></canvas>
+
+<!-- NAV -->
+<nav>
+  <a href="./index.html" class="nav-logo">MISSION HOME</a>
+  <ul class="nav-links">
+    <li><a href="#works">WORKS</a></li>
+    <li><a href="#pricing">PRICING</a></li>
+    <li><a href="#contact">SECRET BASE</a></li>
+  </ul>
+  <a href="./index.html" class="nav-back">🛸 宇宙人モードへ</a>
+  <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="nav-mobile-menu" aria-label="メニューを開く">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div id="nav-mobile-menu" class="nav-mobile-menu">
+  <a href="#works">WORKS</a>
+  <a href="#pricing">PRICING</a>
+  <a href="#contact">CONTACT</a>
+  <a href="./index.html">🛸 宇宙人モードへ</a>
+</div>
+
+<!-- 演出をスキップして実績・料金へ直接ジャンプ（課題1: 本題到達までが遠い問題への対策） -->
+<a href="#field-records" id="quick-jump-fab" class="quick-jump-fab" aria-label="演出をスキップして実績・料金を見る">
+  <span class="quick-jump-fab-icon" aria-hidden="true">📡</span>
+  <span>実績・料金を見る</span>
+</a>
+
+<!-- ════ PROLOGUE — 問いかけスクロール（スタガー） ════ -->
+<section id="prologue" aria-label="導入の問いかけ">
+  <div class="prologue-sticky">
+    <div class="prologue-step" data-step="0">
+      <p>あなたの価値は、<br>どこにありますか？</p>
+    </div>
+    <div class="prologue-step" data-step="1">
+      <p>AIが正解を教えてくれる時代――<br>自分らしさは、誰も教えてくれない。</p>
+    </div>
+    <div class="prologue-step" data-step="2">
+      <p>あなたの価値は、<br>あなたの中に。</p>
+    </div>
+    <div class="prologue-step prologue-final" data-step="3">
+      <p>
+        <span class="prologue-typo prologue-typo-1">観測する、</span>
+        <span class="prologue-typo prologue-typo-2">ヒマジン<span class="dot">。</span></span>
+        <span class="prologue-value">AI活用<span class="x">×</span>ライティング<span class="x">×</span>世界観設計</span>
+      </p>
+    </div>
+    <div class="prologue-dots" aria-hidden="true">
+      <span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+</section>
+
+<!-- ════ HERO ════ -->
+<section id="hero">
+
+  <!-- アウトライン巨大文字（装飾） -->
+  <div id="hero-outline" data-text="043" aria-hidden="true">043</div>
+
+  <!-- メインコンテンツ -->
+  <div id="hero-content">
+    <span class="hero-code">// STATIONARYOBSERVER No.043 — MISSION EARTH GUARD</span>
+
+    <h1>
+      <span class="hero-typo hero-typo-1" data-text="観測する、">観測する、</span>
+      <span class="hero-typo hero-typo-2">ヒマジン<span class="dot">。</span></span>
+    </h1>
+
+    <div class="hero-sub-row">
+      <div class="hero-sub-bar"></div>
+      <span class="hero-sub-text">作業療法士 × WEBライター × SF作家</span>
+    </div>
+    <span class="hero-tagline">"人を観察する仕事"を言葉とAIに変換し、未知との遭遇を自分らしさの発見に変える。</span>
+
+    <div class="hero-cta-row">
+      <a href="#field-records" class="hero-cta primary"><span aria-hidden="true">📡</span> 制作実績を見る</a>
+      <a href="./index.html#services" class="hero-cta secondary">💼 お仕事のご相談はこちら</a>
+      <span class="hero-scroll-hint">scroll ↓</span>
+    </div>
+  </div>
+
+  <!-- スクロールインジケーター -->
+  <div class="hero-scroll">
+    <div class="hero-scroll-line"></div>
+  </div>
+
+</section>
+
+<!-- ════ STATS — スプレッドシートから自動取得 ════ -->
+<section id="stats">
+  <div class="wrap">
+    <p class="sec-label fade">// OBSERVATION LOG</p>
+    <div class="sec-divider fade">
+      <div class="sec-divider-line"></div>
+      <span class="sec-divider-text">STATS</span>
+      <div class="sec-divider-line"></div>
+    </div>
+    <div class="stats-strip fade">
+      <div class="stat-item">
+        <div class="stat-num" id="stat-views">16,000<span class="stat-unit">+</span></div>
+        <div class="stat-label">note累計ビュー</div>
+        <div class="stat-since">（2025年11月 潜入開始〜）</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" id="stat-likes">0<span class="stat-unit">+</span></div>
+        <div class="stat-label">note累計スキ数</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" id="stat-apps">8<span class="stat-unit">本</span></div>
+        <div class="stat-label">WEBアプリ公開数</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ フレーズ・マーキー帯（サイト全体を貫く一言） ════ -->
+<div class="phrase-loop-wrap" aria-hidden="true">
+  <div class="phrase-loop-track">
+    <span>観測する、ヒマジン。</span><span class="phrase-en">OBSERVING, HIMAJIN.</span>
+    <span>OBSERVATION, HIMAJIN.</span><span class="phrase-en">OBSERVANDO, HIMAJIN.</span>
+    <span>관측 중, HIMAJIN.</span><span class="phrase-en">观测中，HIMAJIN。</span>
+    <span class="phrase-cipher">⋗⍮⨹⋙⨂⎚,⍜⍎⌇〨⍮.</span><span class="phrase-en">ORIGINAL TRANSMISSION</span>
+    <span>観測する、ヒマジン。</span><span class="phrase-en">OBSERVING, HIMAJIN.</span>
+    <span>OBSERVATION, HIMAJIN.</span><span class="phrase-en">OBSERVANDO, HIMAJIN.</span>
+    <span>관측 중, HIMAJIN.</span><span class="phrase-en">观测中，HIMAJIN。</span>
+    <span class="phrase-cipher">⋗⍮⨹⋙⨂⎚,⍜⍎⌇〨⍮.</span><span class="phrase-en">ORIGINAL TRANSMISSION</span>
+  </div>
+</div>
+
+<!-- ════ SERVICES — スクロールで紹介 ════ -->
+<section id="services" aria-label="サービス紹介">
+  <div class="services-sticky">
+    <div class="svc-step has-embed" data-step="0">
+      <span class="svc-step-index">01 // WRITING</span>
+      <h3 class="svc-step-title">ライティング</h3>
+      <p class="svc-step-tagline">あなたの価値を、言葉にする。</p>
+      <div class="svc-embed">
+        <a class="svc-step-read" href="https://note.com/teabreak_invader/n/n23809fb0c8d0" target="_blank" rel="noopener">実例を読む →</a>
+      </div>
+    </div>
+    <div class="svc-step has-embed" data-step="1">
+      <span class="svc-step-index">02 // AI UTILIZATION</span>
+      <h3 class="svc-step-title">AI活用</h3>
+      <p class="svc-step-tagline">AIで紡ぐ、あなたの想い。</p>
+      <div class="svc-embed">
+        <a class="svc-step-read" href="https://note.com/teabreak_invader/n/na000d52e0cc5" target="_blank" rel="noopener">実例を読む →</a>
+      </div>
+    </div>
+    <div class="svc-step has-embed" data-step="2">
+      <span class="svc-step-index">03 // WORLDBUILDING</span>
+      <h3 class="svc-step-title">世界観構築</h3>
+      <p class="svc-step-tagline">描く、思考の宇宙。</p>
+      <div class="svc-embed">
+        <a class="svc-step-read" href="https://note.com/teabreak_invader/n/na6eb068b4566" target="_blank" rel="noopener">実例を読む →</a>
+      </div>
+    </div>
+  </div>
+  <div class="services-dots" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </div>
+</section>
+
+<!-- ════ WORKS ════ -->
+<section id="works">
+  <div class="wrap">
+    <p class="sec-label fade">// ARCHIVE LOG</p>
+    <div class="sec-divider fade">
+      <div class="sec-divider-line"></div>
+      <span class="sec-divider-text">代表記事一覧</span>
+      <div class="sec-divider-line"></div>
+    </div>
+    <p class="svc-intro fade">サービスの実例とは別に<br>宇宙人日記・思考の軌跡を6ログ公開中<span aria-hidden="true">📡</span></p>
+    <div class="article-table fade">
+      <a class="article-row" href="https://note.com/teabreak_invader/n/n26428ffb6d3c" target="_blank" rel="noopener">
+        <span class="article-name">宇宙人ヒマジンの正体<span class="article-desc">自己紹介サイトマップ｜隠蔽工作と協力要請のハナシ</span></span>
+        <span class="article-arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="article-row" href="https://note.com/teabreak_invader/n/n29092a36fd58" target="_blank" rel="noopener">
+        <span class="article-name">見えるんだけど、見えないもの<span class="article-desc">遊戯王から考える「文脈」というテーマ</span></span>
+        <span class="article-arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="article-row" href="https://note.com/teabreak_invader/n/n1cb6a5c34e01" target="_blank" rel="noopener">
+        <span class="article-name">「仮面ライダー」は子どもの趣味？<span class="article-desc">手放して気づいた「自分らしさ」</span></span>
+        <span class="article-arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="article-row" href="https://note.com/teabreak_invader/n/nade7144a9b8f" target="_blank" rel="noopener">
+        <span class="article-name">米津玄師『М八七』が描く「余白」<span class="article-desc">作業療法士が読み解く、言葉に宿る文脈のチカラ</span></span>
+        <span class="article-arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="article-row" href="https://note.com/teabreak_invader/n/n95ccb891d71d" target="_blank" rel="noopener">
+        <span class="article-name">さよなら、ポップコーン。<span class="article-desc">5歳の反抗と成長を描いた「物語の卵」</span></span>
+        <span class="article-arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="article-row" href="https://note.com/teabreak_invader/n/n0564e1496471" target="_blank" rel="noopener">
+        <span class="article-name">AIが出力した架空の人物に、小説を読んでもらったハナシ<span class="article-desc">「日記代行」サービスの舞台裏</span></span>
+        <span class="article-arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <p class="sec-label fade subsec-break">// GADGET HANGAR</p>
+    <div class="sec-divider fade">
+      <div class="sec-divider-line"></div>
+      <span class="sec-divider-text">8 GADGETS ACTIVE</span>
+      <div class="sec-divider-line"></div>
+    </div>
+    <p class="svc-intro fade">ワタシの思考の軌跡が<br>８つの観測ログになりましタ<span aria-hidden="true">📡</span></p>
+    <div class="works-grid fade">
+      <a class="work-card" href="https://stationaryobserverno043.github.io/zed-griff/" target="_blank" rel="noopener">
+        <span class="work-icon" aria-hidden="true">👽️</span>
+        <div class="work-name">ZED GRIFF</div>
+        <div class="work-desc">宇宙語翻訳システム</div>
+        <div class="work-note">宇宙語で紡ぐ、秘密のコトバ。</div>
+      </a>
+      <a class="work-card" href="https://stationaryobserverno043.github.io/SILENCE/" target="_blank" rel="noopener">
+        <span class="work-icon" aria-hidden="true">🌊</span>
+        <div class="work-name">SILENCE</div>
+        <div class="work-desc">余白の観測装置</div>
+        <div class="work-note">静けさの中に見つける、アナタの「余白」。</div>
+      </a>
+      <a class="work-card" href="https://stationaryobserverno043.github.io/NOISE/?v=2" target="_blank" rel="noopener">
+        <span class="work-icon" aria-hidden="true">📡</span>
+        <div class="work-name">NOISE</div>
+        <div class="work-desc">文脈の観測装置</div>
+        <div class="work-note">途絶える「文脈」に、コトバに宿った想いを見いだス。</div>
+      </a>
+      <a class="work-card" href="https://stationaryobserverno043.github.io/B.E.A.R/?v=4" target="_blank" rel="noopener">
+        <span class="work-icon" aria-hidden="true">🐻</span>
+        <div class="work-name">B.E.A.R.</div>
+        <div class="work-desc">生体反応警戒レーダー</div>
+        <div class="work-note">近隣の熊出没情報を検索する。宇宙生命体探知機の転用ツール。</div>
+      </a>
+      <a class="work-card" href="https://stationaryobserverno043.github.io/memories_odyssey/?v=4" target="_blank" rel="noopener">
+        <span class="work-icon" aria-hidden="true">🎮</span>
+        <div class="work-name">MEMORIES ODYSSEY</div>
+        <div class="work-desc">星座という名の物語</div>
+        <div class="work-note">思い出を、8bitの銀河につめこんデ。</div>
+      </a>
+      <a class="work-card" href="https://stationaryobserverno043.github.io/hoshi_monogatari/hoshi_monogatari.html?v=3" target="_blank" rel="noopener">
+        <span class="work-icon" aria-hidden="true">🌟</span>
+        <div class="work-name">星ヲ巡る旅</div>
+        <div class="work-desc">日々のメモが星になる</div>
+        <div class="work-note">コトバの欠片が、星座を描ク。</div>
+      </a>
+      <a class="work-card" href="https://stationaryobserverno043.github.io/hoshi-shindan/hoshi_seikaku_shindan.html?v=5" target="_blank" rel="noopener">
+        <span class="work-icon" aria-hidden="true">🌌</span>
+        <div class="work-name">星の性格診断</div>
+        <div class="work-desc">銀河のマトリクスで解析</div>
+        <div class="work-note">アナタの想いの現在地と、目的地ハ？</div>
+      </a>
+      <a class="work-card" href="https://stationaryobserverno043.github.io/hoshi-shindan/hoshi_shindan.html?v=5" target="_blank" rel="noopener">
+        <span class="work-icon" aria-hidden="true">🪐</span>
+        <div class="work-name">SNS星タイプ診断</div>
+        <div class="work-desc">SNS人格を星として解析</div>
+        <div class="work-note">SNSの宇宙を旅するための、ミチシルベ。</div>
+      </a>
+    </div>
+    <div style="text-align:center;margin:24px 0 0;">
+      <a href="./apps.html" style="font-family:'Noto Sans JP',sans-serif;font-size:11px;color:var(--accent);
+        text-decoration:none;letter-spacing:2px;border-bottom:1px solid rgba(255,47,146,.25);padding-bottom:2px;">
+        GADGET HANGAR をすべて見る →
+      </a>
+    </div>
+
+    <p class="sec-label fade subsec-break" id="field-records" style="scroll-margin-top:80px;">// FIELD RECORDS</p>
+    <div class="sec-divider fade">
+      <div class="sec-divider-line"></div>
+      <span class="sec-divider-text">WRITING & AI TRACK RECORD</span>
+      <div class="sec-divider-line"></div>
+    </div>
+    <p class="svc-intro fade">「言葉」と「AI」で何ができるか<br>３つの観測ログで証明しマス<span aria-hidden="true">✒️</span></p>
+    <div class="works-grid results-grid fade">
+      <div class="work-card">
+        <span class="result-badge">WRITING</span>
+        <span class="work-icon" aria-hidden="true">✒️</span>
+        <div class="work-name">日記代行・物語化支援</div>
+        <div class="work-desc">想いの断片から紡ぐ、1,000字の物語</div>
+        <div class="work-note">依頼者様の声つき｜壁打ちから納品までの過程を公開中</div>
+        <div class="work-card-links">
+          <a class="read-link" href="https://note.com/teabreak_invader/n/n23809fb0c8d0" target="_blank" rel="noopener">実例を読む →</a>
+          <a class="order-link" href="https://coconala.com/services/4164756" target="_blank" rel="noopener">この内容で相談する</a>
+        </div>
+      </div>
+      <div class="work-card">
+        <span class="result-badge">AI活用</span>
+        <span class="work-icon" aria-hidden="true">🤖</span>
+        <div class="work-name">自作WEBアプリ×AI活用</div>
+        <div class="work-desc">AIで観測装置を作り、自分の言葉を紡ぐ</div>
+        <div class="work-note">「効率化」ではなく「拡張」としてのAI活用実例</div>
+        <div class="work-card-links">
+          <a class="read-link" href="https://note.com/teabreak_invader/n/na000d52e0cc5" target="_blank" rel="noopener">実例を読む →</a>
+          <a class="order-link" href="https://coconala.com/services/4232136" target="_blank" rel="noopener">この内容で相談する</a>
+        </div>
+      </div>
+      <div class="work-card">
+        <span class="result-badge">世界観構築</span>
+        <span class="work-icon" aria-hidden="true">🌌</span>
+        <div class="work-name">発信ネタが尽きない世界観設計</div>
+        <div class="work-desc">「自分だけの掛け合わせ」を発信軸に変換する方法</div>
+        <div class="work-note">ヒマジンという世界観そのものが実例です</div>
+        <div class="work-card-links">
+          <a class="read-link" href="https://note.com/teabreak_invader/n/na6eb068b4566" target="_blank" rel="noopener">実例を読む →</a>
+          <a class="order-link" href="https://note.com/webview/teabreak_invader/membership" target="_blank" rel="noopener">この内容で相談する</a>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:8px;margin-bottom:64px;">
+      <a href="#pricing" style="font-family:'Noto Sans JP',sans-serif;font-size:11px;color:var(--dim);
+        text-decoration:none;letter-spacing:2px;border-bottom:1px solid rgba(110,79,122,.25);padding-bottom:2px;">
+        料金一覧を見る →
+      </a>
+    </div>
+  </div>
+  <div class="sec-loop-wrap" aria-hidden="true">
+    <div class="sec-loop-track green reverse">
+      <span>GADGET HANGAR ・</span><span>8 GADGETS ACTIVE ・</span>
+      <span>GADGET HANGAR ・</span><span>8 GADGETS ACTIVE ・</span>
+      <span>GADGET HANGAR ・</span><span>8 GADGETS ACTIVE ・</span>
+      <span>GADGET HANGAR ・</span><span>8 GADGETS ACTIVE ・</span>
+    </div>
+  </div>
+</section>
+
+<!-- ════ PRICING — バラバラだった料金をここに集約 ════ -->
+<section id="pricing">
+  <div class="wrap">
+    <p class="sec-label fade">// TRANSMISSION RATES</p>
+    <div class="sec-divider fade">
+      <div class="sec-divider-line"></div>
+      <span class="sec-divider-text">料金一覧</span>
+      <div class="sec-divider-line"></div>
+    </div>
+    <p class="svc-intro fade">依頼したい内容から、そのままご相談へ<span aria-hidden="true">📡</span></p>
+    <div class="pricing-table fade">
+      <a class="pricing-row" href="https://coconala.com/services/4164756" target="_blank" rel="noopener">
+        <span class="pricing-name">✒️ 日記代行・物語化支援<span class="pricing-desc">想いの断片から紡ぐ、1,000字の物語</span></span>
+        <span class="pricing-price copyable">¥3,000<small>〜</small></span>
+      </a>
+      <a class="pricing-row" href="https://coconala.com/services/4164726" target="_blank" rel="noopener">
+        <span class="pricing-name">📝 記事制作<span class="pricing-desc">note・ブログ記事などの執筆代行</span></span>
+        <span class="pricing-price copyable">¥5,000<small>〜</small></span>
+      </a>
+      <a class="pricing-row" href="https://coconala.com/services/4232136" target="_blank" rel="noopener">
+        <span class="pricing-name">🤖 AI活用サポート<span class="pricing-desc">自作WEBアプリ・AI活用の壁打ち伴走</span></span>
+        <span class="pricing-price copyable">¥5,000<small>〜</small></span>
+      </a>
+      <a class="pricing-row" href="https://note.com/webview/teabreak_invader/membership" target="_blank" rel="noopener">
+        <span class="pricing-name">🌌 世界観構築メンバーシップ<span class="pricing-desc">発信ネタが尽きない世界観設計をサポート</span></span>
+        <span class="pricing-price copyable">¥403<small>〜/月</small></span>
+      </a>
+      <a class="pricing-row" href="https://x.com/teabreak_inv" target="_blank" rel="noopener">
+        <span class="pricing-name">🚀 SFの世界で遊ぶ<span class="pricing-desc">宇宙人と気軽に交信！</span></span>
+        <span class="pricing-price free copyable">X（@teabreak_inv）</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ════ CONTACT ════ -->
+<section id="contact" style="position:relative;overflow:hidden;">
+  <div class="wrap">
+    <p class="sec-label fade">// RETURN TRANSMISSION</p>
+    <div class="sec-divider fade">
+      <div class="sec-divider-line"></div>
+      <span class="sec-divider-text">SECRET BASE</span>
+      <div class="sec-divider-line"></div>
+    </div>
+    <div class="contact-inner">
+      <p class="contact-watermark" aria-hidden="true">観測する、ヒマジン。</p>
+      <p class="contact-catch fade">
+        観測は、終わらない。
+      </p>
+      <p class="contact-invite fade">ミッションの全貌は、秘密基地に</p>
+      <a href="./index.html#services" class="gate-cta primary fade">
+        <span class="gate-cta-icon" aria-hidden="true"></span>
+        <span class="gate-cta-text">
+          <span class="gate-cta-label">WRITING / AI SUPPORT ¥3,000〜</span>
+          <span class="gate-cta-main">お仕事のご相談はこちら</span>
+        </span>
+        <span class="gate-cta-arrow" aria-hidden="true">→</span>
+      </a>
+      <a href="./index.html" class="gate-cta fade gate-cta--spaced">
+        <span class="gate-cta-icon" aria-hidden="true"></span>
+        <span class="gate-cta-text">
+          <span class="gate-cta-label">STATIONARYOBSERVER No.043</span>
+          <span class="gate-cta-main">🛸 宇宙人モードへ切り替え</span>
+        </span>
+        <span class="gate-cta-arrow" aria-hidden="true">→</span>
+      </a>
+      <a href="https://x.com/teabreak_inv" target="_blank" rel="noopener" class="gate-cta fade gate-cta--spaced-bottom">
+        <span class="gate-cta-icon" aria-hidden="true"></span>
+        <span class="gate-cta-text">
+          <span class="gate-cta-label">宇宙人と気軽に交信</span>
+          <span class="gate-cta-main">X（@teabreak_inv）</span>
+        </span>
+        <span class="gate-cta-arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+  <div class="sec-loop-wrap" aria-hidden="true">
+    <div class="sec-loop-track cyan">
+      <span>RETURN TRANSMISSION ・</span><span>SECRET BASE ・</span>
+      <span>RETURN TRANSMISSION ・</span><span>SECRET BASE ・</span>
+      <span>RETURN TRANSMISSION ・</span><span>SECRET BASE ・</span>
+      <span>RETURN TRANSMISSION ・</span><span>SECRET BASE ・</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div class="phrase-loop-wrap" aria-hidden="true">
+  <div class="phrase-loop-track">
+    <span>観測する、ヒマジン。</span><span class="phrase-en">OBSERVING, HIMAJIN.</span>
+    <span>OBSERVATION, HIMAJIN.</span><span class="phrase-en">OBSERVANDO, HIMAJIN.</span>
+    <span>관측 중, HIMAJIN.</span><span class="phrase-en">观测中，HIMAJIN。</span>
+    <span class="phrase-cipher">⋗⍮⨹⋙⨂⎚,⍜⍎⌇〨⍮.</span><span class="phrase-en">ORIGINAL TRANSMISSION</span>
+    <span>観測する、ヒマジン。</span><span class="phrase-en">OBSERVING, HIMAJIN.</span>
+    <span>OBSERVATION, HIMAJIN.</span><span class="phrase-en">OBSERVANDO, HIMAJIN.</span>
+    <span>관측 중, HIMAJIN.</span><span class="phrase-en">观测中，HIMAJIN。</span>
+    <span class="phrase-cipher">⋗⍮⨹⋙⨂⎚,⍜⍎⌇〨⍮.</span><span class="phrase-en">ORIGINAL TRANSMISSION</span>
+  </div>
+</div>
+<footer>
+  <p class="footer-giant" aria-hidden="true">観測する、ヒマジン。</p>
+  <div class="wrap">
+    <p class="footer-logo">MISSION EARTH GUARD — 地球侵略阻止ミッション</p>
+    <p class="footer-copy">
+      <span class="copyable">《恒点観測員043号》グレイ＝ニートゥ＝ヒマジン</span><br>
+      NASAには通報しないでネ⚠️<br>
+      <a href="./index.html">🛸 宇宙人モードへ戻る（← MISSION HOME）</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+/* ════ モバイルナビ・トグル ════ */
+(function(){
+  const btn = document.getElementById('nav-toggle');
+  const menu = document.getElementById('nav-mobile-menu');
+  if(!btn || !menu) return;
+  const close = ()=>{ btn.setAttribute('aria-expanded','false'); menu.classList.remove('open'); btn.setAttribute('aria-label','メニューを開く'); };
+  const open = ()=>{ btn.setAttribute('aria-expanded','true'); menu.classList.add('open'); btn.setAttribute('aria-label','メニューを閉じる'); };
+  btn.addEventListener('click', ()=>{
+    (btn.getAttribute('aria-expanded')==='true') ? close() : open();
+  });
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click', close));
+  window.addEventListener('resize', ()=>{ if(window.innerWidth>640) close(); });
+})();
+
+/* ════ ポップ紙吹雪(コンフェッティ)の背景 ════ */
+(function(){
+  const c=document.getElementById('stars'),ctx=c.getContext('2d');let bits=[];
+  const cfx=document.getElementById('stars-fx'),ctxfx=cfx.getContext('2d');
+  const hero=document.getElementById('hero');
+  const palette=['255,47,146','182,255,46','139,61,255','255,166,0'];
+  /* フッターのフレーズ帯（phrase-cipher）と同じ宇宙語グリフを再利用し、世界観を統一 */
+  const GLYPHS=['⋗','⍮','⨹','⋙','⨂','⎚','⍜','⍎','⌇','〨','⊐','⋛','*','⍕','⍱','⎓','⍽','⎘','⌖','⍹','⊠','⎙','⍦','⍙','⋚','⎎','⊎','⊏'];
+  function resize(){
+    c.width=innerWidth;c.height=innerHeight;
+    cfx.width=innerWidth;cfx.height=innerHeight;
+  }
+  function init(){bits=[];const n=Math.floor(c.width*c.height/42000);
+    for(let i=0;i<n;i++)bits.push({
+      x:Math.random()*c.width,y:Math.random()*c.height,
+      r:Math.random()*1.1+.6,
+      col:palette[Math.floor(Math.random()*palette.length)],
+      p:Math.random()*Math.PI*2,s:Math.random()*.004+.002,
+      vy:Math.random()*.06+.02,vx:(Math.random()-.5)*.05,
+      shape:Math.random()<.5?'circle':'square',
+      rot:Math.random()*Math.PI*2, vr:(Math.random()-.5)*.008
+    });}
+
+  /* ── タップ／カーソル操作で生まれる一時的な星（burst・trail・glow） ── */
+  let sparks=[];
+  let holding=false, holdPointerId=null, holdX=0, holdY=0;
+  function toCanvasXY(clientX,clientY){
+    const rect=cfx.getBoundingClientRect();
+    return{
+      x:(clientX-rect.left)*(cfx.width/rect.width),
+      y:(clientY-rect.top)*(cfx.height/rect.height)
+    };
+  }
+  function spawnBurst(x,y){
+    const n=14+Math.floor(Math.random()*8);
+    for(let i=0;i<n;i++){
+      const ang=Math.random()*Math.PI*2, spd=Math.random()*2.2+.6;
+      sparks.push({
+        x,y,vx:Math.cos(ang)*spd,vy:Math.sin(ang)*spd,
+        r:Math.random()*2.4+1.2,
+        col:palette[Math.floor(Math.random()*palette.length)],
+        life:1,decay:Math.random()*.012+.016,
+        shape:Math.random()<.5?'circle':'square',
+        rot:Math.random()*Math.PI*2,vr:(Math.random()-.5)*.06
+      });
+    }
+    if(sparks.length>360) sparks.splice(0,sparks.length-360);
+  }
+  function spawnTrail(x,y){
+    /* 軌跡沿いに宇宙語グリフを流す（旧: 円のパーティクル） */
+    const n=1+Math.floor(Math.random()*2);
+    for(let i=0;i<n;i++){
+      sparks.push({
+        x:x+(Math.random()-.5)*10,y:y+(Math.random()-.5)*10,
+        vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3-.2,
+        r:Math.random()*5+11, /* このシェイプではフォントサイズ(px)として使用 */
+        col:palette[Math.floor(Math.random()*palette.length)],
+        life:1,decay:Math.random()*.012+.014, /* 文字が読める程度、少し長めにフェード */
+        shape:'glyph',char:GLYPHS[Math.floor(Math.random()*GLYPHS.length)],
+        rot:(Math.random()-.5)*.5,vr:(Math.random()-.5)*.02
+      });
+    }
+    if(sparks.length>420) sparks.splice(0,sparks.length-420);
+  }
+  function spawnGlow(x,y){
+    /* 触れている間、じわっと湧き続ける柔らかい光の粒 */
+    for(let i=0;i<2;i++){
+      const ang=Math.random()*Math.PI*2, spd=Math.random()*.5+.05;
+      sparks.push({
+        x:x+(Math.random()-.5)*4,y:y+(Math.random()-.5)*4,
+        vx:Math.cos(ang)*spd,vy:Math.sin(ang)*spd-.05,
+        r:Math.random()*2.1+1,
+        col:palette[Math.floor(Math.random()*palette.length)],
+        life:1,decay:Math.random()*.008+.011, /* ゆっくり長めにフェード */
+        shape:Math.random()<.6?'circle':'square',
+        rot:Math.random()*Math.PI*2,vr:(Math.random()-.5)*.03
+      });
+    }
+    if(sparks.length>420) sparks.splice(0,sparks.length-420);
+  }
+  {
+    let lastTrailT=0, lastTouchTime=0;
+    function spawnMoveTrail(x,y){
+      const now=performance.now();
+      if(now-lastTrailT<16) return; /* 軌跡として見えるよう密度を上げる */
+      lastTrailT=now;
+      spawnTrail(x,y);
+    }
+
+    /* ── タッチ（スマホ）: pointermoveはスクロールが始まると
+       ブラウザにpointercancelされて止まってしまうため、
+       スクロール中も途切れず届くtouch系イベントを使う ── */
+    document.addEventListener('touchstart', e=>{
+      lastTouchTime=performance.now();
+      const t=e.touches[0]; if(!t) return;
+      const p=toCanvasXY(t.clientX,t.clientY);
+      holding=true; holdX=p.x; holdY=p.y;
+      spawnBurst(p.x,p.y); /* 触れた瞬間の小さな「ポッ」というきっかけ */
+    }, {passive:true});
+    document.addEventListener('touchmove', e=>{
+      lastTouchTime=performance.now();
+      if(!holding) return;
+      const t=e.touches[0]; if(!t) return;
+      const p=toCanvasXY(t.clientX,t.clientY);
+      holdX=p.x; holdY=p.y; /* 指を動かしても追従する */
+      spawnMoveTrail(p.x,p.y);
+    }, {passive:true});
+    const endTouchHold=()=>{ holding=false; };
+    document.addEventListener('touchend', endTouchHold, {passive:true});
+    document.addEventListener('touchcancel', endTouchHold, {passive:true});
+
+    /* ── マウス（PC）: タッチ直後に発火する合成マウスイベントは
+       lastTouchTimeで直近すぎる場合スキップして二重発火を防ぐ ── */
+    let mouseHolding=false;
+    document.addEventListener('mousedown', e=>{
+      if(performance.now()-lastTouchTime<700) return;
+      mouseHolding=true; holding=true;
+      const p=toCanvasXY(e.clientX,e.clientY);
+      holdX=p.x; holdY=p.y;
+      spawnBurst(p.x,p.y);
+    });
+    document.addEventListener('mousemove', e=>{
+      if(performance.now()-lastTouchTime<700) return;
+      const p=toCanvasXY(e.clientX,e.clientY);
+      if(mouseHolding){
+        holdX=p.x; holdY=p.y;
+        spawnMoveTrail(p.x,p.y);
+        return;
+      }
+      spawnMoveTrail(p.x,p.y); /* PCはホバー中も軽い軌跡を出す */
+    });
+    const endMouseHold=()=>{ mouseHolding=false; holding=false; };
+    document.addEventListener('mouseup', endMouseHold);
+    document.addEventListener('mouseleave', endMouseHold);
+  }
+
+  function draw(t){
+    ctx.clearRect(0,0,c.width,c.height);
+    ctxfx.clearRect(0,0,cfx.width,cfx.height);
+    if(holding) spawnGlow(holdX,holdY);
+    for(const s of bits){
+      s.y-=s.vy; s.x+=s.vx; s.rot+=s.vr;
+      if(s.y<-10){s.y=c.height+10;s.x=Math.random()*c.width;}
+      const a=.07+.13*(.5+.5*Math.sin(s.p+t*s.s));
+      ctx.save();ctx.translate(s.x,s.y);ctx.rotate(s.rot);
+      ctx.fillStyle=`rgba(${s.col},${a})`;
+      if(s.shape==='circle'){ctx.beginPath();ctx.arc(0,0,s.r,0,Math.PI*2);ctx.fill();}
+      else{ctx.fillRect(-s.r,-s.r,s.r*2,s.r*2);}
+      ctx.restore();
+    }
+    for(let i=sparks.length-1;i>=0;i--){
+      const s=sparks[i];
+      s.x+=s.vx; s.y+=s.vy; s.vx*=.97; s.vy*=.97; s.rot+=s.vr;
+      s.life-=s.decay;
+      if(s.life<=0){sparks.splice(i,1);continue;}
+      const a=s.life*.85;
+      ctxfx.save();ctxfx.translate(s.x,s.y);ctxfx.rotate(s.rot);
+      ctxfx.fillStyle=`rgba(${s.col},${a})`;
+      if(s.shape==='circle'){ctxfx.beginPath();ctxfx.arc(0,0,s.r,0,Math.PI*2);ctxfx.fill();}
+      else if(s.shape==='glyph'){
+        ctxfx.font=`${s.r}px 'Noto Sans JP',sans-serif`;
+        ctxfx.textAlign='center';ctxfx.textBaseline='middle';
+        ctxfx.fillText(s.char,0,0);
+      }
+      else{ctxfx.fillRect(-s.r,-s.r,s.r*2,s.r*2);}
+      ctxfx.restore();
+    }
+    requestAnimationFrame(draw);}
+  addEventListener('resize',()=>{resize();init();});
+  /* load完了を待たず即座に初期化・描画開始（iframe等の読み込みが遅いとタップ反応が
+     いつまでも起きないように見えてしまうため） */
+  resize();init();requestAnimationFrame(draw);c.classList.add('on');
+})();
+
+/* ════ フレーズ・マーキー：指で触ると加速/減速/逆行でき、
+   離すと元の速度・向きにゆっくり戻る ════ */
+(function(){
+  const tracks=document.querySelectorAll('.phrase-loop-track, .sec-loop-track');
+  tracks.forEach(track=>{
+    const wrap=track.parentElement;
+    const reversed=track.classList.contains('reverse');
+    wrap.style.touchAction='pan-y'; /* 縦スクロールは邪魔しない */
+    track.style.animation='none';  /* CSSの自動ループをやめてJS制御に切り替え */
+    track.style.willChange='transform';
+
+    let halfWidth=0, baseVelocity=0, velocity=0, pos=0;
+    let dragging=false, lastX=0, lastT=0, dragVelocity=0;
+
+    function measure(){
+      halfWidth=track.scrollWidth/2;           /* コンテンツは2セット分複製済み */
+      const dir=reversed?1:-1;                  /* reverseは元々右向きに流れる */
+      baseVelocity=dir*halfWidth/30;             /* 元の速さの感覚に近い値 */
+      if(!dragging && velocity===0) velocity=baseVelocity;
+    }
+    measure();
+    addEventListener('resize', measure);
+
+    let lastFrame=performance.now();
+    function frame(t){
+      const dt=Math.min((t-lastFrame)/1000,.05);
+      lastFrame=t;
+      if(!dragging){
+        /* 離した後、元の速度・向きへ指数関数的になめらかに収束 */
+        velocity+=(baseVelocity-velocity)*Math.min(dt*1.8,1);
+      }
+      pos+=velocity*dt;
+      if(halfWidth>0){
+        if(pos<=-halfWidth) pos+=halfWidth;
+        if(pos>0) pos-=halfWidth;
+      }
+      track.style.transform=`translateX(${pos}px)`;
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+
+    function onDown(e){
+      dragging=true;
+      lastX=e.clientX; lastT=performance.now();
+      dragVelocity=0;
+    }
+    function onMove(e){
+      if(!dragging) return;
+      const now=performance.now();
+      const dx=e.clientX-lastX;
+      const dtms=Math.max(now-lastT,1);
+      pos+=dx;
+      dragVelocity=dx/(dtms/1000);
+      lastX=e.clientX; lastT=now;
+    }
+    function onUp(){
+      if(!dragging) return;
+      dragging=false;
+      velocity=dragVelocity; /* 離した瞬間の勢いを引き継ぎ、そこから元の速度へ戻す */
+    }
+
+    wrap.addEventListener('pointerdown', onDown, {passive:true});
+    wrap.addEventListener('pointermove', onMove, {passive:true});
+    wrap.addEventListener('pointerup', onUp, {passive:true});
+    wrap.addEventListener('pointercancel', onUp, {passive:true});
+    wrap.addEventListener('pointerleave', ()=>{ if(dragging) onUp(); }, {passive:true});
+  });
+})();
+
+/* ════ フェードイン ════ */
+(function(){
+  const io=new IntersectionObserver(entries=>{
+    for(const e of entries)if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
+  },{threshold:.12});
+  document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+})();
+
+/* ════ クイックジャンプFAB表示制御 ════
+   - 少しスクロールしたら出現（最初の一瞬は世界観を邪魔しない）
+   - WORKS以降（実績・料金に既に到達）では、以降ずっと隠す
+     （末尾のcontactでCTAやマーキー帯と重なってゴチャつくのを防ぐ）
+════ */
+(function(){
+  const fab = document.getElementById('quick-jump-fab');
+  const works = document.getElementById('works');
+  if(!fab) return;
+
+  let pastThreshold = false, inWorksArea = false, pastWorks = false;
+
+  function updateVisibility(){
+    fab.classList.toggle('visible', pastThreshold && !inWorksArea && !pastWorks);
+  }
+
+  addEventListener('scroll', ()=>{
+    pastThreshold = window.scrollY > window.innerHeight * 0.4;
+    updateVisibility();
+  }, {passive:true});
+
+  if(works){
+    const io = new IntersectionObserver(entries=>{
+      for(const e of entries){
+        inWorksArea = e.isIntersecting;
+        /* 一度WORKSの下端を通過したら、以後は二度と出さない */
+        if(!e.isIntersecting && e.boundingClientRect.top < 0) pastWorks = true;
+      }
+      updateVisibility();
+    }, {threshold:0});
+    io.observe(works);
+  }
+})();
+
+/* ════ スクロール連動スタガー（上へ流れる演出） ════
+   #prologue / #services 共通:
+   セクション内のスクロール量に1:1で連動し、
+   現在の行を中心に・前の行は上へ流れて消え・次の行は下から現れる
+════ */
+(function(){
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function initScrollStagger(sectionId, stepSelector, dotSelector){
+    const wrap  = document.getElementById(sectionId);
+    const steps = wrap ? [...wrap.querySelectorAll(stepSelector)] : [];
+    const dots  = wrap ? [...wrap.querySelectorAll(dotSelector)] : [];
+    if(!wrap || !steps.length) return;
+
+    let ticking = false;
+
+    function render(){
+      const rect  = wrap.getBoundingClientRect();
+      const total = wrap.offsetHeight - window.innerHeight;
+      const scrolled  = Math.min(Math.max(-rect.top, 0), Math.max(total,1));
+      const progress  = total > 0 ? scrolled / total : 0;
+      const raw = progress * steps.length; /* 連続値：今どの行の、どの位置にいるか */
+      const amount = window.innerHeight * 0.55; /* 上へ流れる量 */
+      const activeIdx = Math.min(steps.length - 1, Math.floor(raw));
+
+      steps.forEach((el,i)=>{
+        if(reduce){
+          el.style.opacity = i === activeIdx ? '1' : '0';
+          return;
+        }
+        /* t: -側=まだ来ていない（下で待機）／0=中央／+側=通過済み（上へ流れて消える） */
+        let t = Math.max(-1.4, Math.min(1.4, raw - (i + 0.5)));
+        /* 最終行は次の行に譲る必要がないので、中央に到達したらそのまま固定表示する */
+        if(i === steps.length - 1) t = Math.min(0, t);
+        el.style.transform = `translateY(${(-t * amount).toFixed(1)}px)`;
+        el.style.opacity   = Math.max(0, 1 - Math.abs(t) * 1.15).toFixed(3);
+      });
+
+      steps.forEach((el,i)=>el.classList.toggle('active', i === activeIdx));
+      dots.forEach((d,i)=>d.classList.toggle('active', i === activeIdx));
+    }
+
+    function onScroll(){
+      if(ticking) return;
+      ticking = true;
+      requestAnimationFrame(()=>{ render(); ticking = false; });
+    }
+
+    window.addEventListener('scroll', onScroll, {passive:true});
+    window.addEventListener('resize', render);
+    render();
+  }
+
+  initScrollStagger('prologue', '.prologue-step', '.prologue-dots span');
+  initScrollStagger('services', '.svc-step', '.services-dots span');
+})();
+
+/* ════ HEROスクロール連動 ════
+   - アウトライン"043"が視差でゆっくり上へ
+   - コンテンツが少し下へ引かれる（逆視差）
+════ */
+(function(){
+  const outline = document.getElementById('hero-outline');
+  const content = document.getElementById('hero-content');
+  const hero    = document.getElementById('hero');
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  function update(){
+    const sy = window.scrollY;
+    const h  = hero.offsetHeight;
+    const p  = Math.min(sy / h, 1);
+
+    /* 043 — ゆっくり上へ視差 */
+    if(outline){
+      outline.style.transform = `translate(-50%, calc(-50% - ${p * 80}px))`;
+      outline.style.opacity   = (1 - p * 1.6).toString();
+    }
+    /* コンテンツ — 少し下に引かれる（重さの演出） */
+    if(content){
+      content.style.transform = `translateY(${p * 30}px)`;
+      content.style.opacity   = (1 - p * 1.2).toString();
+    }
+  }
+
+  window.addEventListener('scroll', update, {passive:true});
+  update();
+})();
+
+/* ════ スプレッドシートからnote累計ビュー・WEBアプリ数を取得 ════
+   index.htmlと同じCSV公開URLを共有。シートを直すだけで両ページに反映される。
+════ */
+(async function loadStats(){
+  const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRYj6JERO2gRcLIQEagsyyj-6w5ay24f4MP4tPFe03oLAdgA-gRpUWejdJ9e6wGzVQ6jjSvlWslYKPi/pub?output=csv';
+  try{
+    const res = await fetch(CSV_URL);
+    if(!res.ok) return;
+    const text = await res.text();
+    const rows = text.trim().split('\n').map(r => r.split(','));
+    /* B1 = rows[0][1]（note累計ビュー）, B2 = rows[1][1]（WEBアプリ数）, B3 = rows[2][1]（note累計スキ数・ポートフォリオのみ） */
+    const views = rows[0]?.[1]?.trim().replace(/"/g,'');
+    const apps  = rows[1]?.[1]?.trim().replace(/"/g,'');
+    const likes = rows[2]?.[1]?.trim().replace(/"/g,'');
+    const viewsEl = document.getElementById('stat-views');
+    const appsEl  = document.getElementById('stat-apps');
+    const likesEl = document.getElementById('stat-likes');
+
+    /* views/likesは「数値ならカンマ区切り、それ以外はそのまま＋'+'単位」という同一ロジックのため共通化 */
+    function renderPlusStat(el, raw){
+      if(!raw || !el) return;
+      const num = Number(raw.replace(/,/g,''));
+      el.innerHTML = isNaN(num)
+        ? `${raw}<span class="stat-unit">+</span>`
+        : `${num.toLocaleString('ja-JP')}<span class="stat-unit">+</span>`;
+    }
+
+    renderPlusStat(viewsEl, views);
+    if(apps && appsEl){
+      appsEl.innerHTML = `${apps.replace(/,/g,'')}<span class="stat-unit">本</span>`;
+    }
+    renderPlusStat(likesEl, likes);
+  }catch(e){
+    /* 取得失敗時はHTMLの初期値をそのまま表示 */
+  }
+})();
+
+/* ════ PWA: Service Worker登録（ホーム画面への追加を可能にする） ════ */
+if('serviceWorker' in navigator){
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw-portfolio.js').catch(()=>{
+      /* 登録失敗時もページ表示自体には影響させない */
+    });
+  });
+}
+</script>
+</body>
+</html>
