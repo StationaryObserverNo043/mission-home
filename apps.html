@@ -399,6 +399,21 @@ body::before {
 
       <div class="gadget-divider"></div>
 
+      <!-- ヒキザン -->
+      <a class="gadget-card fade-in" href="https://stationaryobserverno043.github.io/hikizan/?v=4" target="_blank" rel="noopener">
+        <div class="gadget-inner">
+          <div class="gadget-icon">🐱</div>
+          <div class="gadget-body">
+            <div class="gadget-name">ヒキザン</div>
+            <div class="gadget-subtitle">BUDGET RESOURCE MONITOR</div>
+            <div class="gadget-desc">予算を決めて、無理のない家計管理ミッション。</div>
+          </div>
+          <div class="gadget-launch">起動 ▷</div>
+        </div>
+      </a>
+
+      <div class="gadget-divider"></div>
+
     </div>
   </div>
 </main>
@@ -461,6 +476,26 @@ window.addEventListener('load', () => {
     typeWriter('《J.A.C.O》：地球防衛ガジェット格納庫へようこそ——');
   }, 800);
 });
+
+/* ════ スプレッドシートB6(WEBアプリ公開数)から登録ガジェット数を取得 ════
+   index.html／portfolio.htmlと同じCSV公開URLを共有。シートを直すだけで3ページに反映される。
+════ */
+(async function loadGadgetCount(){
+  const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRYj6JERO2gRcLIQEagsyyj-6w5ay24f4MP4tPFe03oLAdgA-gRpUWejdJ9e6wGzVQ6jjSvlWslYKPi/pub?output=csv';
+  try{
+    const res = await fetch(CSV_URL);
+    if(!res.ok) return;
+    const text = await res.text();
+    const rows = text.trim().split('\n').map(r => r.split(','));
+    const apps = rows[5]?.[1]?.trim().replace(/"/g,'').replace(/,/g,''); // B6
+    if(apps){
+      const el = document.getElementById('gadget-count');
+      if(el) el.textContent = `登録ガジェット数：${apps}`;
+    }
+  }catch(e){
+    /* 取得失敗時はHTMLの初期値をそのまま表示 */
+  }
+})();
 </script>
 
 </body>
