@@ -5,19 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>地球侵略阻止ミッション｜グレイ=ニートゥ=ヒマジン</title>
 
-<meta name="description" content="発信コンサル・AI活用相談・言語化サポート。作業療法士×WEBライター×SF作家が「あなたらしさ」を一緒に観測します。自分らしさを言語化したい方・AIを活用したい初心者の方・発信の軸を作りたい方へ。">
+<meta name="description" content="頭の中にあるけど、まだ形になっていないものを、あなた自身の言葉と形にする。作業療法士×WEBライター×SF作家が、言語化・AI活用・記事制作・世界観づくりまでを一つの流れで支えます。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://stationaryobserverno043.github.io/mission-home/?v=6">
-<meta property="og:title" content="地球侵略阻止ミッション｜発信コンサル・AI活用相談・言語化サポート">
-<meta property="og:description" content="発信コンサル・AI活用相談・言語化サポート。作業療法士10年以上×WEBライター×SF作家が「あなたの物語」を一緒に見つけます。まずは無料DM相談から。">
+<meta property="og:title" content="地球侵略阻止ミッション｜その正解、本当にアナタの物語ですか？">
+<meta property="og:description" content="あなたの中にある、まだ形になっていないものを、一緒に観測します。作業療法士10年以上×WEBライター×SF作家。まずは無料DM相談から。">
 <meta property="og:image" content="https://stationaryobserverno043.github.io/mission-home/ogp_home.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="ja_JP">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@teabreak_inv">
-<meta name="twitter:title" content="地球侵略阻止ミッション｜発信コンサル・AI活用相談・言語化サポート">
-<meta name="twitter:description" content="発信コンサル・AI活用相談・言語化サポート。作業療法士10年以上×WEBライター×SF作家が「あなたの物語」を一緒に見つけます。まずは無料DM相談から。">
+<meta name="twitter:title" content="地球侵略阻止ミッション｜その正解、本当にアナタの物語ですか？">
+<meta name="twitter:description" content="あなたの中にある、まだ形になっていないものを、一緒に観測します。作業療法士10年以上×WEBライター×SF作家。まずは無料DM相談から。">
 <meta name="twitter:image" content="https://stationaryobserverno043.github.io/mission-home/ogp_home.png">
 
 <!-- ホーム画面アイコン（iOS / Android） -->
@@ -59,7 +59,7 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 56px; }
 
 body {
   background: var(--bg);
@@ -806,6 +806,308 @@ nav {
 }
 
 /* ════════════════════════════════
+   リニューアル：BEFORE → AFTER の流れ
+════════════════════════════════ */
+
+/* ── HERO：「地球侵略」の定義 ── */
+.invasion-note {
+  max-width: 480px;
+  margin: 28px auto 0;
+  font-size: 13px;
+  line-height: 2;
+  color: #e6d9bd;
+  text-align: center;
+}
+.inv-title { font-size: 14px; font-weight: 700; letter-spacing: 3px; color: var(--night-text); }
+.inv-line { margin-top: 14px; }
+
+/* ── BEFORE（旧「こんな方へ」） ── */
+.before-sec {
+  background: rgba(29,99,173,0.03);
+  border-top: 1px solid rgba(29,99,173,0.1);
+  border-bottom: 1px solid rgba(29,99,173,0.1);
+  padding: 28px 0;
+}
+.before-inner { max-width: 480px; margin: 0 auto; }
+.before-label {
+  font-family: 'Orbitron', monospace;
+  font-size: 10px;
+  color: var(--accent);
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+.before-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.before-list li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 13px;
+  color: #33425c;
+  line-height: 1.7;
+}
+.before-list li::before { content: '▷'; position: absolute; left: 0; color: var(--accent); }
+.before-note {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--border2);
+  font-size: 12px;
+  color: var(--dim);
+  line-height: 1.9;
+}
+
+/* ── TRANSFORM（変化ビジュアル） ── */
+.flow-stages { display: grid; gap: 8px; max-width: 420px; margin: 0 auto; }
+.flow-stage {
+  background: radial-gradient(ellipse at 50% 0%, var(--night-panel) 0%, var(--night-bg) 70%);
+  border: 1px solid rgba(245,234,210,0.18);
+  border-radius: 14px;
+  padding: 14px 14px 16px;
+  color: var(--night-text);
+}
+.flow-tag {
+  font-family: 'Orbitron', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--night-accent);
+  margin-bottom: 6px;
+}
+.flow-stage svg { display: block; width: 100%; height: auto; }
+.flow-cap {
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--night-dim);
+}
+.flow-cap b { display: block; font-size: 13px; color: var(--night-text); }
+.flow-arrow { text-align: center; color: var(--accent); font-size: 12px; line-height: 1; opacity: 0.7; }
+.flow-stage--after { --lag: 0.3s; }
+
+/* アニメーション：各コマが画面に入った時に1回だけ再生 */
+@media (prefers-reduced-motion: no-preference) {
+  .flow-stage .scan { transform: translateX(-108px); }
+  .flow-stage .rev  { opacity: 0; }
+  .flow-stage .draw { stroke-dasharray: 1; stroke-dashoffset: 1; }
+  .flow-stage .pop  { opacity: 0; }
+  .flow-stage.play .scan { animation: flowSweep 2.2s cubic-bezier(.3,.6,.3,1) 0.2s forwards; }
+  .flow-stage.play .rev  { animation: flowFade 0.8s ease 1.2s forwards; }
+  .flow-stage.play .draw { animation: flowDraw 1.2s ease calc(var(--lag, 0.3s) + var(--i, 0) * 0.6s) forwards; }
+  .flow-stage.play .pop  { animation: flowFade 0.6s ease calc(var(--lag, 0.3s) + var(--i, 0) * 0.35s) forwards; }
+  @keyframes flowSweep { to { transform: translateX(0); } }
+  @keyframes flowDraw  { to { stroke-dashoffset: 0; } }
+  @keyframes flowFade  { to { opacity: 1; } }
+}
+
+/* ── CONCEPT：3ステップ ── */
+.concept-steps { list-style: none; margin: 16px 0 6px; }
+.concept-steps li { position: relative; padding: 0 0 18px 46px; }
+.concept-steps li::before {
+  content: attr(data-n);
+  position: absolute; left: 0; top: 0;
+  width: 32px; height: 32px;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--border2);
+  border-radius: 50%;
+  background: var(--panel2);
+  font-family: 'Orbitron', monospace;
+  font-size: 10px; font-weight: 700;
+  color: var(--accent);
+}
+.concept-steps li:not(:last-child)::after {
+  content: '';
+  position: absolute; left: 16px; top: 36px; bottom: 4px;
+  width: 1px; background: var(--border2);
+}
+.step-en {
+  display: block;
+  font-family: 'Orbitron', monospace;
+  font-size: 11px; letter-spacing: 2px;
+  color: var(--accent);
+  margin-bottom: 2px;
+}
+.step-jp { display: block; font-size: 13px; color: #33425c; line-height: 1.8; }
+.step-sub { display: block; margin-top: 2px; font-size: 12px; line-height: 1.7; color: var(--dim); }
+.concept-steps .is-start::before { border-style: dashed; color: var(--dim); }
+.concept-steps .is-goal::before { background: var(--accent); border-color: var(--accent); color: #fff; }
+.concept-steps .is-goal .step-jp { font-weight: 700; color: var(--text); }
+
+/* ── SERVICES：3ステップ配置 ── */
+.svc-step + .svc-step { margin-top: 28px; }
+.svc-step + .svc-step::before {
+  content: '▼';
+  display: block;
+  text-align: center;
+  font-size: 10px;
+  color: var(--accent);
+  opacity: 0.6;
+  margin-bottom: 14px;
+}
+.svc-step-head { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+.svc-step-num {
+  font-family: 'Orbitron', monospace;
+  font-size: 22px; font-weight: 900; line-height: 1;
+  color: rgba(29,99,173,0.35);
+}
+.svc-step-name {
+  font-family: 'Orbitron', monospace;
+  font-size: 14px; font-weight: 700; letter-spacing: 2px;
+  color: var(--accent);
+}
+.svc-step-desc { margin-top: 2px; font-size: 12px; line-height: 1.7; color: #4a5b73; }
+.svc-tag { margin-bottom: 8px; line-height: 1.6; }
+.svc-when { display: block; font-size: 12px; line-height: 1.7; color: #33425c; }
+.svc-when b { display: block; margin-bottom: 1px; font-size: 10px; font-weight: 700; letter-spacing: 1px; color: var(--accent); }
+
+/* ── AFTER（未来） ── */
+.after-card {
+  background: radial-gradient(ellipse at 50% 0%, var(--night-panel) 0%, var(--night-bg) 70%);
+  border: 1px solid rgba(245,234,210,0.18);
+  border-radius: 16px;
+  padding: 24px 22px;
+  color: var(--night-text);
+  text-align: center;
+}
+.after-quote { font-size: 16px; font-weight: 700; line-height: 1.7; }
+.future-q { margin: 28px 0 8px; font-size: 15px; font-weight: 700; line-height: 1.6; color: var(--text); }
+.future-list { list-style: none; border-bottom: 1px solid var(--border); }
+.future-row {
+  display: block;
+  padding: 12px 6px;
+  border-top: 1px solid var(--border);
+  color: inherit;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.future-row:hover { background: rgba(29,99,173,0.04); }
+.fut-from { display: block; font-size: 12px; color: var(--dim); }
+.fut-to { display: block; font-size: 14px; font-weight: 700; color: var(--accent); }
+.fut-to::before { content: '▷ '; font-weight: 400; }
+.future-cta {
+  display: block;
+  margin-top: 20px;
+  padding: 14px 16px;
+  text-align: center;
+  font-size: 13px; font-weight: 700; line-height: 1.6;
+  color: var(--accent);
+  text-decoration: none;
+  border: 1px solid rgba(29,99,173,0.4);
+  background: rgba(29,99,173,0.06);
+  border-radius: 12px;
+}
+.future-cta:hover { background: rgba(29,99,173,0.1); }
+.future-row:focus-visible, .future-cta:focus-visible, .profile-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ── PROFILE内リンク（CTAと競合しないよう控えめに） ── */
+.profile-links { margin-top: 20px; display: flex; flex-direction: column; gap: 10px; }
+.profile-link {
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  padding: 12px 16px;
+  background: var(--panel);
+  border: 1px solid;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.profile-link--apps { border-color: #1f8a5c; color: #146b45; }
+.profile-link--apps:hover { background: rgba(31,138,92,0.07); }
+.profile-link--portfolio { border-color: #b8135f; color: #8a0d47; }
+.profile-link--portfolio:hover { background: rgba(184,19,95,0.06); }
+.pl-title { font-family: 'Orbitron', monospace; font-size: 13px; font-weight: 900; letter-spacing: 1.5px; }
+.pl-sub { font-size: 11px; line-height: 1.6; }
+
+/* ── HERO：ベネフィット＋主CTA ── */
+.hero-benefit {
+  max-width: 480px;
+  margin: 44px auto 0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.9;
+  color: var(--night-text);
+}
+.hero-benefit::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 1px;
+  margin: 0 auto 24px;
+  background: rgba(245,234,210,0.3);
+}
+.hero-about { max-width: 360px; margin: 28px auto 0; text-align: left; }
+.hero-byline {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.9;
+  color: var(--night-dim);
+}
+.hero-cta {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  margin-top: 24px;
+  padding: 12px 26px;
+  color: var(--night-dim);
+  text-decoration: none;
+  background: rgba(159,184,217,0.1);
+  border: 1px solid var(--night-dim);
+  border-radius: 12px;
+  transition: background 0.2s;
+}
+.hero-cta:hover { color: var(--night-text); background: rgba(159,184,217,0.2); }
+.hero-cta:focus-visible { outline: 2px solid var(--night-text); outline-offset: 3px; }
+.hero-cta-main { font-size: 14px; font-weight: 700; letter-spacing: 1px; }
+.hero-soft {
+  margin: 16px 0 0;
+  font-size: 12px;
+  line-height: 1.9;
+  color: var(--night-dim);
+}
+
+/* ── TRANSFORM：BEFORE → AFTER の言葉 ── */
+
+/* ── 無料DMの流れ（主カード内） ── */
+.dm-flow { margin: 12px 0 4px; padding: 12px 14px; border: 1px dashed var(--border2); border-radius: 10px; }
+.dm-flow-title { margin-bottom: 6px; font-size: 11px; font-weight: 700; color: var(--accent); }
+.dm-flow ol { list-style: none; counter-reset: dm; display: flex; flex-direction: column; gap: 4px; }
+.dm-flow li { counter-increment: dm; position: relative; padding-left: 26px; font-size: 12px; line-height: 1.7; color: #33425c; }
+.dm-flow li::before {
+  content: counter(dm);
+  position: absolute; left: 0; top: 2px;
+  width: 18px; height: 18px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  background: rgba(29,99,173,0.1);
+  font-family: 'Orbitron', monospace; font-size: 10px; font-weight: 700;
+  color: var(--accent);
+}
+.dm-flow-note { margin-top: 8px; font-size: 11px; line-height: 1.7; color: var(--dim); }
+.card-cta {
+  margin-top: 12px;
+  padding: 11px 14px;
+  text-align: center;
+  font-size: 13px; font-weight: 700;
+  color: #fff;
+  background: var(--accent);
+  border-radius: 10px;
+}
+.card-cta span { display: block; font-size: 10px; font-weight: 400; opacity: 0.85; }
+
+/* ── PROFILE：依頼する理由・経験の中身 ── */
+.profile-why {
+  margin: 4px 0 18px;
+  padding: 14px 16px;
+  background: rgba(29,99,173,0.05);
+  border-left: 3px solid rgba(29,99,173,0.4);
+  border-radius: 0 10px 10px 0;
+}
+.profile-why-title { margin-bottom: 8px; font-size: 11px; font-weight: 700; color: var(--accent); }
+.profile-why p { font-size: 13px; line-height: 1.85; color: #33425c; }
+.profile-why p + p { margin-top: 4px; }
+.profile-why .why-close { margin-top: 10px; font-weight: 700; color: var(--text); }
+
+
+/* ════════════════════════════════
    PC レスポンシブ（768px〜）
 ════════════════════════════════ */
 @media (min-width: 768px) {
@@ -854,15 +1156,10 @@ nav {
     gap: 18px;
   }
 
-  /* PRIMARY MISSIONカードは全幅 */
-  .service-grid > a:first-child,
-  .service-grid > div:first-child {
+  /* PRIMARY MISSION・メンバーシップは全幅 */
+  .service-card--primary,
+  .service-card--wide {
     grid-column: 1 / -1;
-  }
-
-  /* 派生ナビ：4列 */
-  .service-grid > div:nth-child(2) > div > div {
-    grid-template-columns: repeat(4, 1fr) !important;
   }
 
   /* ④ CONTACT：3列横並び */
@@ -943,13 +1240,50 @@ nav {
   .grid-col .links-grid {
     grid-template-columns: 1fr !important;
   }
-  .grid-col .service-grid > a:first-child,
-  .grid-col .service-grid > div:first-child {
+  .grid-col .service-card--primary,
+  .grid-col .service-card--wide {
     grid-column: auto;
   }
-  .grid-col .service-grid > div:nth-child(2) > div > div {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
+  /* DOM順＝スマホの読み順（物語 → PROFILE → CONTACT）。PCでは元の3カラム配置に戻す */
+  .grid-col-left   { grid-column: 1; grid-row: 1; }
+  .grid-col-center { grid-column: 2; grid-row: 1; }
+  .grid-col-right  { grid-column: 3; grid-row: 1; }
+}
+
+/* PC：新規コンポーネントの調整 */
+@media (min-width: 768px) {
+  .invasion-note { max-width: 640px; font-size: 15px; }
+  .hero-benefit { max-width: 640px; font-size: 16px; }
+  .hero-about { max-width: 440px; }
+  .hero-byline, .hero-soft { font-size: 13px; }
+  .before-inner { max-width: 560px; }
+}
+@media (min-width: 1024px) {
+  .flow-stages { max-width: none; grid-template-columns: 1fr auto 1fr auto 1fr; align-items: center; gap: 12px; }
+  .flow-arrow { transform: rotate(-90deg); }
+  .flow-stage--after { --lag: 2.2s; }
+}
+
+/* ── 改行位置：文節単位で折り返す（＋対応ブラウザは auto-phrase） ── */
+body { line-break: strict; overflow-wrap: break-word; word-break: auto-phrase; }
+@supports not (word-break: auto-phrase) { body { word-break: keep-all; } }
+.section-title, .concept-title, .service-name, .svc-step-desc, .svc-when, .hero-benefit, .inv-line,
+.after-quote, .future-q, .fut-from, .fut-to, .flow-cap, .step-jp, .step-sub, .hero-byline, .hero-soft,
+.profile-why p, .before-list li, .dm-flow li, .contact-sub, .pl-sub { text-wrap: balance; }
+.concept-desc, .service-desc, .profile-desc, .before-note, .dm-flow-note, .contact-desc { text-wrap: pretty; }
+
+/* 動きを減らす設定の人には、既存の常時アニメーションも止める */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .star { animation: none; opacity: 0.4; }
+  .mission-badge, .mission-badge::before, .loading-bar::after { animation: none; }
+  .fade-in { opacity: 1; transform: none; transition: none; }
+}
+
+/* キーボード操作時のフォーカス表示 */
+.nav-btn:focus-visible, .service-card:focus-visible, .contact-card:focus-visible, .link-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 </style>
 </head>
@@ -959,9 +1293,9 @@ nav {
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <a href="#about" class="nav-btn">PROFILE</a>
     <a href="#concept" class="nav-btn">CONCEPT</a>
     <a href="#services" class="nav-btn">SERVICES</a>
+    <a href="#about" class="nav-btn">PROFILE</a>
     <a href="#contact" class="nav-btn">CONTACT</a>
     <a href="#links" class="nav-btn">LINKS</a>
   </div>
@@ -977,7 +1311,7 @@ nav {
     <div class="sub-title">Mission Earth Guard</div>
     <div class="observer-id">《恒点観測員043号》グレイ=ニートゥ=ヒマジン</div>
     <div class="loading-bar"></div>
-    <div class="loading-text">ｰｰｰLoading…《0.003sec》</div>
+    <div class="loading-text">ｰｰｰLoading…<wbr>《0.003sec》</div>
     <div class="hero-img-block">
       <picture>
         <source media="(min-width: 768px)" srcset="hero_desktop.png">
@@ -985,49 +1319,377 @@ nav {
       </picture>
     </div>
     <p style="font-size:13px;color:#c5d4ea;max-width:480px;margin:0 auto;line-height:2;text-align:center;">
-      <span style="color:#dcebfa;font-size:13px;">「その正解、本当にアナタの物語ですか？」</span><br>
-      <span style="font-size:12px;color:#9fb0c9;display:block;margin-top:8px;line-height:1.9;">
-        正解があふれる時代に、「自分はどうしたいか」が<br>
-        どこかに置き去りになっていませんか。<br><br>
-        作業療法士 × WEBライター × SF作家。<br>
-        あなたの言葉の中に眠る物語を、一緒に観測しマス👽️⚡️
-      </span>
+      <span style="color:#dcebfa;font-size:15px;">「その正解、<wbr>本当に<wbr>アナタの<wbr>物語ですか？」</span>
     </p>
+    <div class="invasion-note">
+      <div class="inv-title">「地球侵略」――</div>
+      <div class="inv-line">情報過多の<wbr>AI時代。</div>
+      <div class="inv-line">急速な<wbr>グローバル化と、<br>ダイバーシティ。</div>
+      <div class="inv-line">他人や<wbr>AIの<wbr>“正解”に<wbr>飲み込まれて、<br>自分の物語を<wbr>見失っていませんか？</div>
+    </div>
+    <div class="hero-benefit">
+      頭の<wbr>中にあるけど、<wbr>形にならない。<br>
+      言葉にならない<wbr>想いを、<wbr>あなただけの<wbr>物語へ。<wbr>
+    </div>
+    <a class="hero-cta" href="https://x.com/teabreak_inv" target="_blank" rel="noopener">
+      <span class="hero-cta-main">📡Xで<wbr>交信する</span>
+    </a>
+    <div class="hero-about">
+      <div class="hero-byline">
+        作業療法士 × WEBライター × SF作家。<br>
+        あなたの<wbr>言葉の中に<wbr>眠る物語を<wbr>観測します。<wbr>
+      </div>
+      <div class="hero-soft">
+        難しい<wbr>相談は<wbr>不要。<br>
+        まずは<wbr>SFの世界で、<br>宇宙人と<wbr>交流するところから<wbr>始めてみませんか？<wbr>
+      </div>
+    </div>
   </div>
 </header>
 
-<!-- こんな方へ -->
-<section style="background:rgba(29,99,173,0.03);border-top:1px solid rgba(29,99,173,0.1);border-bottom:1px solid rgba(29,99,173,0.1);padding:28px 0;">
+<!-- BEFORE：こんな状態、ありませんか？ -->
+<section id="before" class="before-sec">
   <div class="container">
-    <div style="max-width:480px;margin:0 auto;">
-      <div style="font-family:'Orbitron',monospace;font-size:10px;color:var(--accent);letter-spacing:2px;margin-bottom:14px;">📡 こんな方へ</div>
-      <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
-        <li style="font-size:13px;color:#33425c;padding-left:18px;position:relative;line-height:1.7;">
-          <span style="position:absolute;left:0;color:var(--accent);">▷</span>SNSで発信したいのに、自分の「軸」が見えない
-        </li>
-        <li style="font-size:13px;color:#33425c;padding-left:18px;position:relative;line-height:1.7;">
-          <span style="position:absolute;left:0;color:var(--accent);">▷</span>AIを使ってみたいけど、何から始めればいいか分からない
-        </li>
-        <li style="font-size:13px;color:#33425c;padding-left:18px;position:relative;line-height:1.7;">
-          <span style="position:absolute;left:0;color:var(--accent);">▷</span>「自分らしさ」って何だろう、とぼんやり感じている
-        </li>
-        <li style="font-size:13px;color:#33425c;padding-left:18px;position:relative;line-height:1.7;">
-          <span style="position:absolute;left:0;color:var(--accent);">▷</span>想いはあるのに、言葉にするとどこか違う気がする
-        </li>
-        <li style="font-size:13px;color:#33425c;padding-left:18px;position:relative;line-height:1.7;">
-          <span style="position:absolute;left:0;color:var(--accent);">▷</span>正解を追いかけるのに、少し疲れてきた
-        </li>
+    <div class="before-inner">
+      <div class="before-label">📡 BEFORE — こんな<wbr>状態、<wbr>ありませんか？</div>
+      <ul class="before-list">
+        <li>やりたいことはある。<wbr>でも、<wbr>言葉にならない。</li>
+        <li>発信したい。<wbr>でも、<wbr>何を発信すればいいかわからない。</li>
+        <li>AIを<wbr>使っているけど、<wbr>自分の言葉なのかわからなくなる。</li>
+        <li>自分の経験に<wbr>価値があるのか、<wbr>わからない。</li>
+        <li>やりたいことが<wbr>複数あって、<wbr>一つにまとめられない。</li>
+        <li>自分の活動を、<wbr>人に説明できない。</li>
       </ul>
+      <p class="before-note">
+        それは、<wbr>物語がないからではありません。<br>
+        まだ<b style="color:var(--accent);">観測されていない</b>だけ。<wbr>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- TRANSFORM：頭の中 → 観測・言語化 → 自分の言葉（インラインSVG・画像追加なし） -->
+<section id="flow">
+  <div class="container">
+    <div class="section-label">// あなたの<wbr>中で起きる<wbr>変化</div>
+    <div class="section-title">■ TRANSFORM</div>
+    <div class="divider"><span class="divider-text">SIGNAL → WORDS</span></div>
+
+    <div class="flow-stages">
+
+      <div class="flow-stage">
+        <div class="flow-tag">BEFORE</div>
+        <svg viewBox="0 0 300 168" role="img" aria-label="考え・経験・違和感の断片が、バラバラに散らばっている">
+          <g fill="#f5ead2" opacity=".55"><circle cx="18" cy="22" r="1.1"/><circle cx="84" cy="12" r=".9"/><circle cx="150" cy="60" r="1"/><circle cx="270" cy="24" r="1.2"/><circle cx="286" cy="88" r=".9"/><circle cx="22" cy="92" r="1"/><circle cx="98" cy="128" r="1.1"/><circle cx="196" cy="150" r=".9"/><circle cx="278" cy="140" r="1"/><circle cx="140" cy="18" r=".8"/><circle cx="200" cy="96" r="1"/></g>
+          <g font-family="'Noto Sans JP',sans-serif" fill="#9fb8d9">
+            <text x="34" y="54" font-size="13" opacity=".9" transform="rotate(-12 34 54)">やりたい</text>
+            <text x="186" y="38" font-size="12" opacity=".6" transform="rotate(9 186 38)">でも…</text>
+            <text x="108" y="94" font-size="13" opacity=".95" transform="rotate(14 108 94)">違和感</text>
+            <text x="216" y="118" font-size="12" opacity=".7" transform="rotate(-9 216 118)">経験</text>
+            <text x="44" y="142" font-size="24" opacity=".45" transform="rotate(-6 44 142)">？</text>
+            <text x="150" y="152" font-size="12" opacity=".55" transform="rotate(-16 150 152)">価値観</text>
+            <text x="246" y="70" font-size="11" opacity=".5">想い</text>
+          </g>
+          <g font-family="'Noto Sans JP',sans-serif" fill="#f0824f" font-size="11" opacity=".8">
+            <text x="6" y="112">正解</text>
+            <text x="262" y="160">正解</text>
+          </g>
+        </svg>
+        <p class="flow-cap"><b>頭の中</b>考え・<wbr>経験・<wbr>違和感が、<wbr>バラバラに<wbr>散らばっている</p>
+      </div>
+
+      <div class="flow-arrow" aria-hidden="true">▼</div>
+
+      <div class="flow-stage">
+        <div class="flow-tag">PROCESS</div>
+        <svg viewBox="0 0 300 168" role="img" aria-label="観測の光が走り、断片が言葉として整列していく">
+          <defs>
+            <linearGradient id="scanGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#5fb0ec" stop-opacity="0"/>
+              <stop offset="1" stop-color="#5fb0ec" stop-opacity=".38"/>
+            </linearGradient>
+          </defs>
+          <g fill="#f5ead2" opacity=".5"><circle cx="16" cy="18" r="1"/><circle cx="72" cy="150" r=".9"/><circle cx="180" cy="16" r="1.1"/><circle cx="282" cy="30" r="1"/><circle cx="290" cy="120" r=".9"/><circle cx="210" cy="152" r="1"/></g>
+          <g class="rev">
+            <g font-family="'Noto Sans JP',sans-serif" font-size="13" fill="#f5ead2">
+              <text x="34" y="54">やりたい</text>
+              <text x="34" y="88">違和感</text>
+              <text x="34" y="122">経験</text>
+            </g>
+            <g fill="#5fb0ec">
+              <circle cx="22" cy="49" r="2.4"/><circle cx="22" cy="83" r="2.4"/><circle cx="22" cy="117" r="2.4"/>
+            </g>
+            <g stroke="#5fb0ec" stroke-opacity=".35" stroke-width="1">
+              <line x1="92" y1="49" x2="138" y2="49"/><line x1="82" y1="83" x2="138" y2="83"/><line x1="70" y1="117" x2="138" y2="117"/>
+            </g>
+          </g>
+          <g font-family="'Noto Sans JP',sans-serif" fill="#9fb8d9" opacity=".55">
+            <text x="192" y="44" font-size="12" transform="rotate(9 192 44)">でも…</text>
+            <text x="228" y="112" font-size="20" transform="rotate(-8 228 112)">？</text>
+            <text x="172" y="144" font-size="12" transform="rotate(-10 172 144)">価値観</text>
+            <text x="252" y="76" font-size="11">想い</text>
+          </g>
+          <g class="scan">
+            <rect x="120" y="8" width="30" height="152" fill="url(#scanGrad)"/>
+            <line x1="150" y1="8" x2="150" y2="160" stroke="#5fb0ec" stroke-width="1.5"/>
+          </g>
+        </svg>
+        <p class="flow-cap"><b>観測と<wbr>言語化</b>ひとつずつ<wbr>拾い上げて、<wbr>言葉にして<wbr>並べていく</p>
+      </div>
+
+      <div class="flow-arrow" aria-hidden="true">▼</div>
+
+      <div class="flow-stage flow-stage--after">
+        <div class="flow-tag">AFTER</div>
+        <svg viewBox="0 0 300 168" role="img" aria-label="言葉が星座のようにつながり、「これ、自分が言いたかったことだ」になる">
+          <g fill="#f5ead2" opacity=".5"><circle cx="20" cy="24" r="1"/><circle cx="76" cy="130" r="1.1"/><circle cx="140" cy="12" r=".8"/><circle cx="274" cy="18" r="1.2"/><circle cx="288" cy="86" r=".9"/><circle cx="18" cy="118" r=".9"/><circle cx="120" cy="158" r="1"/></g>
+          <g fill="none" stroke="#5fb0ec" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <path class="draw" pathLength="1" style="--i:0" d="M40 70 L100 42 L170 72 L240 46"/>
+            <path class="draw" pathLength="1" style="--i:2" d="M170 72 L232 102"/>
+          </g>
+          <g fill="#f5ead2">
+            <circle class="pop" style="--i:0" cx="40" cy="70" r="3.2"/>
+            <circle class="pop" style="--i:1" cx="100" cy="42" r="3.2"/>
+            <circle class="pop" style="--i:2" cx="170" cy="72" r="3.2"/>
+            <circle class="pop" style="--i:3" cx="240" cy="46" r="3.2"/>
+            <circle class="pop" style="--i:4" cx="232" cy="102" r="3.2"/>
+          </g>
+          <g font-family="'Noto Sans JP',sans-serif" font-size="11" fill="#c5d4ea" text-anchor="middle">
+            <text class="pop" style="--i:0" x="40" y="88">経験</text>
+            <text class="pop" style="--i:1" x="100" y="32">違和感</text>
+            <text class="pop" style="--i:2" x="158" y="90">価値観</text>
+            <text class="pop" style="--i:3" x="240" y="36">想い</text>
+            <text class="pop" style="--i:4" x="232" y="120">物語</text>
+          </g>
+          <text class="pop" style="--i:6" font-family="'Noto Sans JP',sans-serif" x="150" y="152" text-anchor="middle" font-size="13" font-weight="700" fill="#f5ead2">「これ、自分が言いたかったことだ」</text>
+        </svg>
+        <p class="flow-cap"><b>自分の言葉</b>言葉がつながって、<wbr>自分の物語になる</p>
+      </div>
+
     </div>
   </div>
 </section>
 
 <!-- ABOUT -->
 <div class="mission-grid">
+<div class="grid-col grid-col-center">
+<!-- CONCEPT -->
+<section id="concept">
+  <div class="container">
+    <div class="section-label">// この<wbr>ミッションの<wbr>理由</div>
+    <div class="section-title">■ CONCEPT</div>
+    <div class="divider"><span class="divider-text">MISSION LOG</span></div>
+
+    <div class="concept-block fade-in" data-num="01">
+      <div class="concept-icon">🌌</div>
+      <div class="concept-title">ワタシが、<wbr>地球に<wbr>潜伏している<wbr>理由。</div>
+      <div class="concept-desc">
+        「どうすればいいか」は、<wbr>調べればすぐ<wbr>出てくる<wbr>時代になりました。<wbr>でも<wbr>「自分はどうしたいか」という<wbr>問いには、<wbr>誰も答えてくれません。<br><br>
+        作業療法士として<wbr>10年以上、<wbr>数え切れない<wbr>「その人らしさ」と<wbr>向き合ってきました。<br><br>
+        正解に<wbr>埋もれた<wbr>想いの奥に、<wbr>本当の物語があると<wbr>知っているから――<wbr>ワタシの<wbr>任務は、<wbr>その想いを<wbr>一緒に<wbr>観測し、<wbr>アナタだけの<wbr>物語を<wbr>見つけること。<wbr>あなたの<wbr>言葉を<wbr>一緒に<wbr>整理するのが、<wbr>ワタシの<wbr>ミッション。<wbr>
+      </div>
+      <div class="concept-tags">
+        <span class="ctag">観測</span>
+        <span class="ctag">言語化</span>
+        <span class="ctag">発信</span>
+        <span class="ctag">作業療法士10年+</span>
+        <span class="ctag">AI活用</span>
+      </div>
+    </div>
+
+    <div class="concept-block fade-in" data-num="02">
+      <div class="concept-icon">🛰️</div>
+      <div class="concept-title">「地球侵略」を<wbr>防ぐ、<wbr>3つのステップ。</div>
+      <div class="concept-desc">
+        侵略を<wbr>防ぐ方法は、<wbr>戦うことではありません。<br>
+        自分の<wbr>中にあるものを、<wbr>自分の言葉にしていくこと。<wbr>
+      </div>
+      <ol class="concept-steps">
+        <li class="is-start" data-n="？"><span class="step-en">NOW</span><span class="step-jp">頭の中では<wbr>分かっている。</span><span class="step-sub">でも、<wbr>言葉にできない。<wbr>形にできない。<br>何から<wbr>始めればいいか<wbr>分からない。</span></li>
+        <li data-n="01"><span class="step-en">OBSERVE</span><span class="step-jp">一緒に<wbr>観測する。</span><span class="step-sub">考え・<wbr>経験・<wbr>違和感・<wbr>価値観を<wbr>見つける。</span></li>
+        <li data-n="02"><span class="step-en">LANGUAGE</span><span class="step-jp">言葉になる。</span><span class="step-sub">観測したものを<wbr>整理して、<wbr>言葉にする。</span></li>
+        <li data-n="03"><span class="step-en">FORM</span><span class="step-jp">形になる。</span><span class="step-sub">自分に<wbr>合った<wbr>形にする。</span></li>
+        <li data-n="▷"><span class="step-en">OUTPUT</span><span class="step-jp">記事・<wbr>作品・<wbr>企画・<wbr>Webアプリなど、<br>実際のアウトプットになる。</span></li>
+        <li class="is-goal" data-n="★"><span class="step-en">GOAL</span><span class="step-jp">自分らしさに<wbr>迷わない。</span></li>
+      </ol>
+      <div class="concept-desc">
+        AIに<wbr>答えを<wbr>任せるのではなく、<br>AIを<wbr>使いながら、<wbr>自分の物語をつくる。<wbr>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="section-label">// 地球への<wbr>介入手段</div>
+    <div class="section-title">■ SERVICES</div>
+    <div class="divider"><span class="divider-text">SELECT MISSION</span></div>
+
+    <p style="font-size:12px;color:#7a90a8;margin-bottom:16px;line-height:1.8;">
+      「自分らしさ」を<wbr>観測し、<wbr>言語化し、<wbr>形にする——<br>
+      どの<wbr>サービスも、<wbr>この一本の<wbr>流れの<br>どこかを<wbr>担当しています。<wbr>
+    </p>
+
+    <div class="svc-step" id="step-observe">
+      <div class="svc-step-head">
+        <span class="svc-step-num">01</span>
+        <div>
+          <div class="svc-step-name">OBSERVE</div>
+          <div class="svc-step-desc">何がしたいのか、<wbr>何に悩んでいるのかを<wbr>観測する</div>
+        </div>
+      </div>
+      <div class="service-grid">
+        <a id="svc-primary" class="service-card service-card--primary fade-in" href="https://x.com/teabreak_inv" target="_blank" rel="noopener" style="border-color:rgba(29,99,173,0.4);box-shadow:0 0 20px rgba(29,99,173,0.08);">
+        <div style="font-size:8px;color:#1d63ad;letter-spacing:2px;margin-bottom:8px;font-family:'Orbitron',monospace;">★ PRIMARY MISSION — まずはここから</div>
+        <div class="svc-tag"><span class="svc-when"><b>こんな<wbr>時に</b>頭の中にはある。<wbr>でも、<wbr>人に説明しようとするとまとまらない。</span></div>
+        <div class="service-header">
+          <span class="service-emoji">📡</span>
+          <span class="service-name">自分らしさ<wbr>観測ミッション</span>
+          <span class="service-platform" style="background:rgba(29,99,173,0.15);border-color:rgba(29,99,173,0.4);color:#1d63ad;">X DM</span>
+        </div>
+        <div class="service-desc">
+          「何を<wbr>相談すればいいかわからない」<wbr>状態から、<wbr>一緒に<wbr>観測します。<br><br>
+          うまく<wbr>話せなくても<wbr>大丈夫。<wbr>「なんとなくモヤモヤしている」<wbr>そのくらいで<wbr>十分です。<br><br>
+          あなたの<wbr>言葉の中にある<wbr>強みや<wbr>物語の種を、<br>
+          10年以上の<wbr>経験と<wbr>「文脈を読む力」で<wbr>一緒に<wbr>言語化します。<wbr>
+        </div>
+        <div class="dm-flow">
+          <div class="dm-flow-title">無料DMの<wbr>流れ<wbr>（30分程度）</div>
+          <ol>
+            <li>今やりたいことを<wbr>聞く。</li>
+            <li>現在地を<wbr>一緒に<wbr>整理する。</li>
+            <li>必要な<wbr>サポートを<wbr>考える。</li>
+          </ol>
+          <div class="dm-flow-note">料金：無料。<wbr>無理な<wbr>勧誘はしません。<wbr>相談した<wbr>結果、<wbr>「今回は依頼しない」でも<wbr>OK！</div>
+        </div>
+        <div class="card-cta">📡Xで<wbr>交信する ▷<span>無料DM ／ X<wbr>（@teabreak_inv）</span></div>
+      </a>
+
+        <a id="svc-membership" class="service-card service-card--wide fade-in" href="https://note.com/webview/teabreak_invader/membership" target="_blank" rel="noopener">
+        <div class="svc-tag"><span class="svc-when"><b>こんな<wbr>時に</b>一度整理しても、<wbr>また頭の<wbr>中が散らかる。<wbr>続けて<wbr>観測したい。</span></div>
+        <div class="service-header">
+          <span class="service-emoji">🚀</span>
+          <span class="service-name">メンバーシップ／宇宙船<wbr>『ASTRO × note号』</span>
+          <span class="service-platform">note</span>
+        </div>
+        <div class="service-desc">
+          「思考の宇宙」を<wbr>旅する<wbr>伴走コミュニティ。<wbr>深掘り<wbr>コンテンツ・<wbr>限定動画・<wbr>Podcastが<wbr>観て聴ける。<wbr>ヒマジンの<wbr>思考回路に<wbr>触れながら、<wbr>自分の物語を<wbr>観測し<wbr>続けるための<wbr>基地です。<wbr>
+        </div>
+        <div class="service-price">¥403〜／月</div>
+      </a>
+      </div>
+    </div>
+
+    <div class="svc-step" id="step-language">
+      <div class="svc-step-head">
+        <span class="svc-step-num">02</span>
+        <div>
+          <div class="svc-step-name">LANGUAGE</div>
+          <div class="svc-step-desc">考え・<wbr>経験・<wbr>価値観を、<wbr>言葉にする</div>
+        </div>
+      </div>
+      <div class="service-grid">
+        <a id="svc-diary" class="service-card fade-in" href="https://coconala.com/services/4164756" target="_blank" rel="noopener">
+        <div class="svc-tag"><span class="svc-when"><b>こんな<wbr>時に</b>言葉にならない<wbr>出来事や<wbr>気持ちを、<wbr>物語として<wbr>残したい。</span></div>
+        <div class="service-header">
+          <span class="service-emoji">✒️</span>
+          <span class="service-name">日記代行 ／ 物語化支援</span>
+          <span class="service-platform">coconala</span>
+        </div>
+        <div class="service-desc">
+          「うまく言えない」のは、<wbr>あなたの<wbr>感度が<wbr>高いからかもしれない。<wbr>日々の出来事や<wbr>感情を<wbr>丁寧に<wbr>ヒアリングして、<wbr>「あなたの物語」として<wbr>言葉にします。<wbr>読んだあとに、<wbr>少し自分が<wbr>好きになれる<wbr>文章を<wbr>目指します。<wbr>
+        </div>
+        <div class="service-price">¥3,000〜</div>
+      </a>
+
+        <a id="svc-ai" class="service-card fade-in" href="https://coconala.com/services/4232136" target="_blank" rel="noopener">
+        <div class="svc-tag"><span class="svc-when"><b>こんな<wbr>時に</b>AIを<wbr>使いたい。<wbr>でも、<wbr>どこまで<wbr>任せていいかわからない。</span></div>
+        <div class="service-header">
+          <span class="service-emoji">🤖</span>
+          <span class="service-name">AI活用サポート｜初心者向け<wbr>相談</span>
+          <span class="service-platform">coconala</span>
+        </div>
+        <div style="font-size:11px;color:var(--dim);margin-bottom:8px;">※無料版<wbr>「Gemini」<wbr>「Claude」<wbr>中心</div>
+        <div class="service-desc">
+          AIを<wbr>「答えを出す装置」ではなく<wbr>「思考を整理する相棒」として<wbr>使います。<br><br>「AIって難しそう」と<wbr>思ったまま<wbr>止まっていませんか。<wbr>無料版Gemini・<wbr>Claudeを<wbr>使って、<wbr>あなたの<wbr>日常やしごとに<wbr>合わせた<wbr>AI活用術を<wbr>一緒に<wbr>育てます。<wbr>最後に<wbr>「あなた専用AI活用レシピ」を<wbr>PDFで<wbr>納品。<wbr>
+        </div>
+        <div class="service-price">¥5,000〜</div>
+      </a>
+      </div>
+    </div>
+
+    <div class="svc-step" id="step-form">
+      <div class="svc-step-head">
+        <span class="svc-step-num">03</span>
+        <div>
+          <div class="svc-step-name">FORM</div>
+          <div class="svc-step-desc">記事、<wbr>SNS、<wbr>日記、<wbr>物語、<wbr>サービスなど、<br>自分に<wbr>合った<wbr>形にする</div>
+        </div>
+      </div>
+      <div class="service-grid">
+        <a id="svc-article" class="service-card fade-in" href="https://coconala.com/services/4164726" target="_blank" rel="noopener">
+        <div class="svc-tag"><span class="svc-when"><b>こんな<wbr>時に</b>伝えたいことはある。<wbr>でも、<wbr>記事という<wbr>形にできない。</span></div>
+        <div class="service-header">
+          <span class="service-emoji">📝</span>
+          <span class="service-name">WEB記事・<wbr>コンテンツ制作</span>
+          <span class="service-platform">coconala</span>
+        </div>
+        <div class="service-desc">
+          あなたの<wbr>専門性や<wbr>経験を、<wbr>読まれる<wbr>言葉へ<wbr>変換します。<wbr>医療・<wbr>介護・<wbr>育児・<wbr>自己啓発領域を<wbr>中心に、<wbr>作業療法士10年以上の<wbr>視点で<wbr>「その人らしさ」が<wbr>滲む記事を<wbr>制作します。<wbr>
+        </div>
+        <div class="service-price">¥5,000〜</div>
+      </a>
+
+        <a id="svc-ip" class="service-card fade-in" href="https://note.com/teabreak_invader/n/n29c7296bf3b9" target="_blank" rel="noopener">
+        <div class="svc-tag"><span class="svc-when"><b>こんな<wbr>時に</b>発信したい。<wbr>でも<wbr>「自分は何を発信する人なのか」が<wbr>決まらない。</span></div>
+        <div class="service-header">
+          <span class="service-emoji">🌌</span>
+          <span class="service-name">IP設計 ／ 世界観構築</span>
+          <span class="service-platform">coconala / DM</span>
+        </div>
+        <div class="service-desc">
+          「何者か」が<wbr>伝わる<wbr>発信軸を<wbr>一緒に<wbr>設計します。<wbr>SNS・<wbr>note・<wbr>ブログを<wbr>縦断する<wbr>世界観の<wbr>構築から<wbr>運用まで。<wbr>「宇宙人が<wbr>SNSに<wbr>潜入したら、<wbr>どんな<wbr>物語になる？」――<wbr>『地球侵略阻止ミッション』<wbr>自体が、<wbr>その実例です。<wbr>
+        </div>
+        <div class="service-price">要相談</div>
+      </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- AFTER：あなたは何を形にしますか？ -->
+<section id="future">
+  <div class="container">
+    <div class="section-label">// 観測のあと</div>
+    <div class="section-title">■ AFTER</div>
+    <div class="divider"><span class="divider-text">YOUR NEXT LOG</span></div>
+
+    <div class="after-card fade-in">
+      <p class="after-quote">「これ、<wbr>自分が<wbr>言いたかったことだ」</p>
+    </div>
+
+    <p class="future-q">あなたは、<wbr>何を形にしますか？</p>
+    <ul class="future-list fade-in">
+      <li><a class="future-row" href="#svc-primary"><span class="fut-from">頭の中にある<wbr>考え</span><span class="fut-to">言葉へ</span></a></li>
+      <li><a class="future-row" href="#svc-diary"><span class="fut-from">誰にも<wbr>話していない<wbr>経験</span><span class="fut-to">物語へ</span></a></li>
+      <li><a class="future-row" href="#svc-article"><span class="fut-from">伝えたい<wbr>仕事</span><span class="fut-to">発信へ</span></a></li>
+      <li><a class="future-row" href="#svc-ai"><span class="fut-from">AIとの<wbr>付き合い<wbr>方</span><span class="fut-to">自分なりの<wbr>方法へ</span></a></li>
+      <li><a class="future-row" href="#svc-membership"><span class="fut-from">自分でも<wbr>気づいていなかった<wbr>価値観</span><span class="fut-to">自分自身の<wbr>物語へ</span></a></li>
+    </ul>
+
+    <a class="future-cta" href="https://x.com/teabreak_inv" target="_blank" rel="noopener">
+      📡Xで<wbr>交信する<br><span style="font-weight:400;font-size:11px;">無料DM ／ 30分程度 ／ 無理な<wbr>勧誘なし</span>
+    </a>
+  </div>
+</section>
+</div>
+
 <div class="grid-col grid-col-left">
 <section id="about">
   <div class="container">
-    <div class="section-label">// 観測対象の記録</div>
+    <div class="section-label">// 観測対象の<wbr>記録</div>
     <div class="section-title">■ PROFILE</div>
     <div class="divider"><span class="divider-text">SCAN COMPLETE</span></div>
 
@@ -1052,19 +1714,26 @@ nav {
         <span class="role-tag">AI活用</span>
         <span class="role-tag">地球観測員</span>
       </div>
+      <div class="profile-why">
+        <div class="profile-why-title">なぜ、<wbr>この3つで<wbr>観測するのか。</div>
+        <p>人の<wbr>「できる」を<wbr>一緒に<wbr>探してきた<wbr>作業療法士。</p>
+        <p>言葉にならないものを<wbr>文章にしてきた<wbr>WEBライター。</p>
+        <p>正解のない<wbr>世界を<wbr>物語にしてきた<wbr>SF作家。</p>
+        <p class="why-close">3つの経験を<wbr>使って、<br>「まだ形になっていないもの」を<br>一緒に<wbr>観測します。</p>
+      </div>
       <div class="profile-desc">
-        精神科・身体科・小児・地域リハビリ——多様な現場で10年以上、作業療法士として働いてきました。<br>
-        ライティング・AI活用・SF創作を掛け合わせ、地球のインターネットに潜伏中。<br>
-        東北在住。愛妻家、2児の父。三度の飯よりカレーライスが好きデス🪬🧬
+        精神科・<wbr>身体科・<wbr>小児・<wbr>地域リハビリ——多様な<wbr>現場で<wbr>10年以上、<wbr>作業療法士として<wbr>働いてきました。<br>
+        ライティング・<wbr>AI活用・<wbr>SF創作を<wbr>掛け合わせ、<wbr>地球のインターネットに<wbr>潜伏中。<br>
+        東北在住。<wbr>愛妻家、<wbr>2児の父。<wbr>三度の飯より<wbr>カレーライスが<wbr>好きデス🪬🧬
       </div>
       <div class="profile-data">
         <div class="data-row">
           <span class="data-key">LOCATION</span>
-          <span class="data-val">日本・東北 ／ ゼド星系・第5惑星ノギリア</span>
+          <span class="data-val">日本・<wbr>東北 ／ ゼド星系・<wbr>第5惑星ノギリア</span>
         </div>
         <div class="data-row">
           <span class="data-key">MISSION</span>
-          <span class="data-val">育児 × 家事 × WEBライター × 地球防衛（SF）</span>
+          <span class="data-val">育児 × 家事 × WEBライター × 地球防衛<wbr>（SF）</span>
         </div>
         <div class="data-row">
           <span class="data-key">ENERGY</span>
@@ -1072,7 +1741,7 @@ nav {
         </div>
         <div class="data-row">
           <span class="data-key">STATUS</span>
-          <span class="data-val">30代 / 2児の父 / SNS多層コンテンツ「地球侵略阻止ミッション」展開中</span>
+          <span class="data-val">30代 / 2児の<wbr>父 / SNS多層コンテンツ<wbr>「地球侵略阻止ミッション」<wbr>展開中</span>
         </div>
       </div>
       <div class="stats-grid">
@@ -1088,12 +1757,12 @@ nav {
             <div class="stat-item stat-item--views">
               <div class="stat-icon">👁️‍🗨️</div>
               <div class="stat-num" id="stat-impressions">---</div>
-              <div class="stat-label">目撃された回数<span class="stat-label-sub">（noteインプレッション累計）</span></div>
+              <div class="stat-label">目撃された<wbr>回数<span class="stat-label-sub">（noteインプレッション累計）</span></div>
             </div>
             <div class="stat-item stat-item--views">
               <div class="stat-icon">🛸</div>
               <div class="stat-num" id="stat-pv">---</div>
-              <div class="stat-label">遭遇した回数<span class="stat-label-sub">（noteページビュー累計）</span></div>
+              <div class="stat-label">遭遇した<wbr>回数<span class="stat-label-sub">（noteページビュー累計）</span></div>
             </div>
             <div class="stat-item stat-item--views">
               <div class="stat-icon">⚡️</div>
@@ -1103,7 +1772,7 @@ nav {
             <div class="stat-item stat-item--views">
               <div class="stat-icon">📡</div>
               <div class="stat-num" id="stat-comments">---</div>
-              <div class="stat-label">交信した回数<span class="stat-label-sub">（noteコメント数累計）</span></div>
+              <div class="stat-label">交信した<wbr>回数<span class="stat-label-sub">（noteコメント数累計）</span></div>
             </div>
           </div>
         </div>
@@ -1115,198 +1784,18 @@ nav {
         </div>
       </div>
 
-      <!-- ガジェット格納庫リンク -->
-      <a href="./apps.html" style="display:flex;align-items:center;justify-content:center;margin-top:20px;padding:16px 18px;background:#1f8a5c;border:1px solid #146b45;text-decoration:none;gap:12px;flex-direction:column;border-radius:12px;box-shadow:0 4px 16px rgba(31,138,92,0.18);">
-        <div style="font-family:'Orbitron',monospace;font-size:16px;font-weight:900;letter-spacing:2px;margin-bottom:6px;color:#fff;">🛰️ ガジェット格納庫</div>
-        <div style="font-family:'Orbitron',monospace;font-size:11px;color:#d9f5e6;font-weight:700;letter-spacing:0.5px;opacity:0.9;line-height:1.6;text-align:center;">🛰️ 全ガジェットを見る<br>WEBアプリ一覧はこちら ▷</div>
-      </a>
-
-      <!-- ポートフォリオリンク -->
-      <a href="./portfolio.html" style="display:flex;align-items:center;justify-content:center;margin-top:12px;padding:16px 18px;background:#b8135f;border:1px solid #8a0d47;text-decoration:none;gap:12px;flex-direction:column;border-radius:12px;box-shadow:0 4px 16px rgba(184,19,95,0.18);">
-        <div style="font-family:'Orbitron',monospace;font-size:16px;font-weight:900;letter-spacing:2px;margin-bottom:6px;color:#fff;">👨‍🚀 ポートフォリオ</div>
-        <div style="font-family:'Orbitron',monospace;font-size:11px;color:#fadbe9;font-weight:700;letter-spacing:0.5px;opacity:0.9;line-height:1.6;text-align:center;">👤 地球人モードへ切り替え<br>実績・ご依頼はこちら ▷</div>
-      </a>
-    </div>
-  </div>
-</section>
-</div>
-
-<div class="grid-col grid-col-center">
-<!-- CONCEPT -->
-<section id="concept">
-  <div class="container">
-    <div class="section-label">// このミッションの理由</div>
-    <div class="section-title">■ CONCEPT</div>
-    <div class="divider"><span class="divider-text">MISSION LOG</span></div>
-
-    <div class="concept-block fade-in" data-num="01">
-      <div class="concept-icon">🌌</div>
-      <div class="concept-title">ワタシが、地球に潜伏している理由。</div>
-      <div class="concept-desc">
-        「どうすればいいか」は、調べればすぐ出てくる時代になりました。<br><br>
-        でも「自分はどうしたいか」という問いには、誰も答えてくれません。<br><br>
-        作業療法士として10年以上、子どもから高齢者まで、数え切れない「その人らしさ」と向き合ってきました。<br><br>
-        正解に埋もれた想いの奥に、本当の物語があると知っているから――<br><br>
-        ワタシの任務は、その想いを一緒に観測し、アナタだけの物語を見つけること。<br>
-        つまり、あなたの言葉を一緒に整理するお仕事デス🚀💫
-      </div>
-      <div class="concept-tags">
-        <span class="ctag">観測</span>
-        <span class="ctag">言語化</span>
-        <span class="ctag">発信</span>
-        <span class="ctag">作業療法士10年+</span>
-        <span class="ctag">AI活用</span>
+      <!-- 関連ページへのリンク -->
+      <div class="profile-links">
+        <a class="profile-link profile-link--apps" href="./apps.html">
+          <span class="pl-title">🛰️ ガジェット格納庫</span>
+          <span class="pl-sub">全ガジェットを<wbr>見る<wbr>（WEBアプリ一覧）</span>
+        </a>
+        <a class="profile-link profile-link--portfolio" href="./portfolio.html">
+          <span class="pl-title">👨‍🚀 ポートフォリオ</span>
+          <span class="pl-sub">地球人モードへ<wbr>切り替え<wbr>（実績・<wbr>ご依頼）</span>
+        </a>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services">
-  <div class="container">
-    <div class="section-label">// 地球への介入手段</div>
-    <div class="section-title">■ SERVICES</div>
-    <div class="divider"><span class="divider-text">SELECT MISSION</span></div>
-
-    <p style="font-size:12px;color:#7a90a8;margin-bottom:16px;line-height:1.8;">
-      「自分らしさ」を観測し、言語化し、発信へ——🪬🧬
-    </p>
-
-    <div class="service-grid">
-
-      <!-- ★ 入口サービス -->
-      <a class="service-card fade-in" href="https://x.com/teabreak_inv" target="_blank" rel="noopener" style="border-color:rgba(29,99,173,0.4);box-shadow:0 0 20px rgba(29,99,173,0.08);">
-        <div style="font-size:8px;color:#1d63ad;letter-spacing:2px;margin-bottom:8px;font-family:'Orbitron',monospace;">★ PRIMARY MISSION — まずはここから</div>
-        <div class="service-header">
-          <span class="service-emoji">📡</span>
-          <span class="service-name">自分らしさ観測ミッション</span>
-          <span class="service-platform" style="background:rgba(29,99,173,0.15);border-color:rgba(29,99,173,0.4);color:#1d63ad;">X DM</span>
-        </div>
-        <div class="service-desc">
-          うまく話せなくても大丈夫。「なんとなくモヤモヤしている」そのくらいで十分です。<br><br>
-          あなたの言葉の中にある強みや物語の種を、<br>
-          10年以上の経験と「文脈を読む力」で一緒に言語化します。
-        </div>
-        <div style="margin:12px 0 8px;padding:10px 14px;background:rgba(29,99,173,0.05);border-left:3px solid rgba(29,99,173,0.4);font-size:12px;color:#144a7a;line-height:1.8;font-family:'Noto Sans JP',sans-serif;text-align:center;">
-          「何を発信すべきか迷う」状態から、<br>
-          「これでいい」が言語化される状態へ。
-        </div>
-        <div style="margin-top:8px;font-size:12px;color:#1d63ad;letter-spacing:1px;font-family:'Noto Sans JP',sans-serif;text-align:center;">
-          ここが、すべてのスタート地点デス。
-        </div>
-        <div style="margin-top:10px;font-size:11px;color:#4a5b73;line-height:1.8;font-family:'Noto Sans JP',sans-serif;text-align:center;">
-          所要時間：30分程度　／　料金：無料　／　無理な勧誘なし
-        </div>
-        <div style="margin-top:10px;font-size:12px;color:#4a5b73;text-align:center;font-family:'Noto Sans JP',sans-serif;">
-          → X（@teabreak_inv）のDMへ
-        </div>
-      </a>
-
-      <!-- 派生サービス見出し -->
-      <div style="margin-top:8px;margin-bottom:4px;">
-        <div style="font-family:'Orbitron',monospace;font-size:9px;color:var(--dim);letter-spacing:2px;margin-bottom:12px;">— その先へ進むなら —</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:11px;color:#4a5b73;font-family:'Noto Sans JP',sans-serif;margin-bottom:20px;">
-          <a href="#svc-membership" style="text-decoration:none;display:block;padding:8px 10px;background:rgba(29,99,173,0.03);border:1px solid rgba(29,99,173,0.08);border-radius:8px;line-height:1.6;transition:border-color .2s;" onmouseover="this.style.borderColor='rgba(29,99,173,0.3)'" onmouseout="this.style.borderColor='rgba(29,99,173,0.08)'">
-            <span style="color:#33425c;">📖 深めたい人</span><br><span style="color:var(--accent);font-size:10px;">→ メンバーシップ</span>
-          </a>
-          <a href="#svc-diary" style="text-decoration:none;display:block;padding:8px 10px;background:rgba(29,99,173,0.03);border:1px solid rgba(29,99,173,0.08);border-radius:8px;line-height:1.6;transition:border-color .2s;" onmouseover="this.style.borderColor='rgba(29,99,173,0.3)'" onmouseout="this.style.borderColor='rgba(29,99,173,0.08)'">
-            <span style="color:#33425c;">✒️ 言語化したい人</span><br><span style="color:var(--accent);font-size:10px;">→ 日記代行</span>
-          </a>
-          <a href="#svc-ai" style="text-decoration:none;display:block;padding:8px 10px;background:rgba(29,99,173,0.03);border:1px solid rgba(29,99,173,0.08);border-radius:8px;line-height:1.6;transition:border-color .2s;" onmouseover="this.style.borderColor='rgba(29,99,173,0.3)'" onmouseout="this.style.borderColor='rgba(29,99,173,0.08)'">
-            <span style="color:#33425c;">🤖 AI使いたい人</span><br><span style="color:var(--accent);font-size:10px;">→ AI相談</span>
-          </a>
-          <a href="#svc-ip" style="text-decoration:none;display:block;padding:8px 10px;background:rgba(29,99,173,0.03);border:1px solid rgba(29,99,173,0.08);border-radius:8px;line-height:1.6;transition:border-color .2s;" onmouseover="this.style.borderColor='rgba(29,99,173,0.3)'" onmouseout="this.style.borderColor='rgba(29,99,173,0.08)'">
-            <span style="color:#33425c;">🌌 仕事化したい人</span><br><span style="color:var(--accent);font-size:10px;">→ 記事・IP設計</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- 観測 -->
-      <a id="svc-membership" class="service-card fade-in" href="https://note.com/webview/teabreak_invader/membership" target="_blank" rel="noopener">
-        <div style="font-size:8px;color:var(--dim);letter-spacing:2px;margin-bottom:8px;font-family:'Orbitron',monospace;">📖 深めたい人へ</div>
-        <div class="service-header">
-          <span class="service-emoji">🚀</span>
-          <span class="service-name">メンバーシップ ASTRO × note号</span>
-          <span class="service-platform">note</span>
-        </div>
-        <div class="service-desc">
-          「思考の宇宙」を旅する伴走コミュニティ。深掘りコンテンツ・限定動画・Podcastが観て聴ける。ヒマジンの思考回路に触れながら、自分の物語を観測し続けるための基地です。
-        </div>
-        <div style="margin-top:10px;font-size:11px;color:#3a6a50;padding:6px 10px;background:rgba(32,216,128,0.04);border-left:2px solid rgba(32,216,128,0.3);line-height:1.7;font-family:'Noto Sans JP',sans-serif;">
-          「発信が止まっていた」→ <span style="color:#1f7a4c;">観測を続けるうちに、言葉が自然に出てくる</span>
-        </div>
-        <div class="service-price">¥403〜／月</div>
-      </a>
-
-      <!-- 言語化 -->
-      <a id="svc-diary" class="service-card fade-in" href="https://coconala.com/services/4164756" target="_blank" rel="noopener">
-        <div style="font-size:8px;color:var(--dim);letter-spacing:2px;margin-bottom:8px;font-family:'Orbitron',monospace;">✒️ 言語化したい人へ</div>
-        <div class="service-header">
-          <span class="service-emoji">✒️</span>
-          <span class="service-name">日記代行 ／ 物語化支援</span>
-          <span class="service-platform">coconala</span>
-        </div>
-        <div class="service-desc">
-          「うまく言えない」のは、あなたの感度が高いからかもしれない。日々の出来事や感情を丁寧にヒアリングして、「あなたの物語」として言葉にします。読んだあとに、少し自分が好きになれる文章を目指します。
-        </div>
-        <div style="margin-top:10px;font-size:11px;color:#3a6a50;padding:6px 10px;background:rgba(32,216,128,0.04);border-left:2px solid rgba(32,216,128,0.3);line-height:1.7;font-family:'Noto Sans JP',sans-serif;">
-          「言葉にならない」→ <span style="color:#1f7a4c;">「これが自分の物語だ」が見つかる</span>
-        </div>
-        <div class="service-price">¥3,000〜</div>
-      </a>
-
-      <a id="svc-ai" class="service-card fade-in" href="https://coconala.com/services/4232136" target="_blank" rel="noopener">
-        <div style="font-size:8px;color:var(--dim);letter-spacing:2px;margin-bottom:8px;font-family:'Orbitron',monospace;">🤖 AIを使いたい人へ</div>
-        <div class="service-header">
-          <span class="service-emoji">🤖</span>
-          <span class="service-name">AI活用サポート｜初心者向け相談</span>
-          <span class="service-platform">coconala</span>
-        </div>
-        <div style="font-size:11px;color:var(--dim);margin-bottom:8px;">※無料版「Gemini」「Claude」中心</div>
-        <div class="service-desc">
-          「AIって難しそう」と思ったまま止まっていませんか。無料版Gemini・Claudeを使って、あなたの日常やしごとに合わせたAI活用術を一緒に育てます。最後に「あなた専用AI活用レシピ」をPDFで納品。
-        </div>
-        <div style="margin-top:10px;font-size:11px;color:#3a6a50;padding:6px 10px;background:rgba(32,216,128,0.04);border-left:2px solid rgba(32,216,128,0.3);line-height:1.7;font-family:'Noto Sans JP',sans-serif;">
-          「AIに振り回される」→ <span style="color:#1f7a4c;">日常で使いこなす側になる</span>
-        </div>
-        <div class="service-price">¥5,000〜</div>
-      </a>
-
-      <!-- 発信 -->
-      <a class="service-card fade-in" href="https://coconala.com/services/4164726" target="_blank" rel="noopener">
-        <div style="font-size:8px;color:var(--dim);letter-spacing:2px;margin-bottom:8px;font-family:'Orbitron',monospace;">🌌 仕事化したい人へ</div>
-        <div class="service-header">
-          <span class="service-emoji">📝</span>
-          <span class="service-name">WEB記事・コンテンツ制作</span>
-          <span class="service-platform">coconala</span>
-        </div>
-        <div class="service-desc">
-          あなたの専門性や経験を、読まれる言葉へ変換します。医療・介護・育児・自己啓発領域を中心に、作業療法士10年以上の視点で「その人らしさ」が滲む記事を制作します。
-        </div>
-        <div style="margin-top:10px;font-size:11px;color:#3a6a50;padding:6px 10px;background:rgba(32,216,128,0.04);border-left:2px solid rgba(32,216,128,0.3);line-height:1.7;font-family:'Noto Sans JP',sans-serif;">
-          「専門性はあるのに伝わらない」→ <span style="color:#1f7a4c;">読まれる言葉に変わる</span>
-        </div>
-        <div class="service-price">¥5,000〜</div>
-      </a>
-
-      <a id="svc-ip" class="service-card fade-in" href="https://note.com/teabreak_invader/n/n29c7296bf3b9" target="_blank" rel="noopener">
-        <div style="font-size:8px;color:var(--dim);letter-spacing:2px;margin-bottom:8px;font-family:'Orbitron',monospace;">🌌 深部ミッション — 本気で仕事化したい人へ</div>
-        <div class="service-header">
-          <span class="service-emoji">🌌</span>
-          <span class="service-name">IP設計 ／ 世界観構築</span>
-          <span class="service-platform">coconala / DM</span>
-        </div>
-        <div class="service-desc">
-          「何者か」が伝わる発信軸を一緒に設計します。SNS・note・ブログを縦断する世界観の構築から運用まで。「地球侵略阻止ミッション」自体がその実例です。
-        </div>
-        <div style="margin-top:10px;font-size:11px;color:#3a6a50;padding:6px 10px;background:rgba(32,216,128,0.04);border-left:2px solid rgba(32,216,128,0.3);line-height:1.7;font-family:'Noto Sans JP',sans-serif;">
-          「発信の軸がバラバラ」→ <span style="color:#1f7a4c;">世界観が一本の線でつながる</span>
-        </div>
-        <div class="service-price">要相談</div>
-      </a>
-
-    </div>
-
   </div>
 </section>
 </div>
@@ -1319,7 +1808,7 @@ nav {
     <div class="divider"><span class="divider-text">3 CHANNELS</span></div>
 
     <p style="font-size:12px;color:#4a5b73;margin-bottom:20px;line-height:1.8;font-family:'Noto Sans JP',sans-serif;">
-      目的に合わせて通信チャンネルを選んでください。
+      最初の<wbr>一歩は、<wbr>Xの無料DMから。<br>考え方を<wbr>知りたい<wbr>方はnote、<br>正式なご<wbr>依頼は<wbr>ココナラへ。<wbr>
     </p>
 
     <div class="contact-grid fade-in">
@@ -1329,7 +1818,7 @@ nav {
         </div>
         <div class="contact-info">
           <div class="contact-name">X (Twitter)</div>
-          <div class="contact-sub">📡 観測入口 — まずはここから気軽に</div>
+          <div class="contact-sub">📡 無料DMで<wbr>相談 — 最初の<wbr>一歩はここから</div>
           <div style="font-size:10px;color:#4a5b73;margin-top:3px;font-family:'Noto Sans JP',sans-serif;">LOG — 軽重力圏</div>
         </div>
         <div class="contact-arrow">→</div>
@@ -1339,7 +1828,7 @@ nav {
         <div class="contact-icon note">📚️</div>
         <div class="contact-info">
           <div class="contact-name">note</div>
-          <div class="contact-sub">🛸 宇宙ログ — 世界観に深く潜りたい方</div>
+          <div class="contact-sub">🛸 宇宙ログ — 世界観に<wbr>深く潜りたい<wbr>方</div>
           <div style="font-size:10px;color:#4a5b73;margin-top:3px;font-family:'Noto Sans JP',sans-serif;">MISSION — 中重力圏</div>
         </div>
         <div class="contact-arrow">→</div>
@@ -1349,7 +1838,7 @@ nav {
         <div class="contact-icon coconala">🌈</div>
         <div class="contact-info">
           <div class="contact-name" style="color:#1d63ad;">coconala</div>
-          <div class="contact-sub">💼 現実依頼 — お仕事の正式窓口</div>
+          <div class="contact-sub">💼 現実依頼 — お<wbr>仕事の正式窓口</div>
           <div style="font-size:10px;color:#1d63ad;margin-top:3px;font-family:'Noto Sans JP',sans-serif;">★ PRIMARY — 強重力圏</div>
         </div>
         <div class="contact-arrow" style="color:#1d63ad;">→</div>
@@ -1367,16 +1856,16 @@ nav {
 
     <div class="links-grid fade-in">
       <a class="link-btn" href="./portfolio.html">👨‍🚀 ポートフォリオ</a>
-      <a class="link-btn" href="./apps.html">🛰️ ガジェット格納庫</a>
       <a class="link-btn" href="https://note.com/teabreak_invader" target="_blank" rel="noopener">📚️ note</a>
       <a class="link-btn" href="https://x.com/teabreak_inv" target="_blank" rel="noopener">👑 X</a>
       <a class="link-btn" href="https://coconala.com/users/5995550" target="_blank" rel="noopener">✒️ coconala</a>
       <a class="link-btn" href="https://suzuri.jp/inv_no_043" target="_blank" rel="noopener">🥷 SUZURI</a>
       <a class="link-btn" href="https://youtube.com/channel/UCsssQJggHGYAqzdb357uJ8A" target="_blank" rel="noopener">📽️ YouTube</a>
       <a class="link-btn" href="https://stationaryobserverno043.github.io/hoshi-shindan/hoshi_shindan.html" target="_blank" rel="noopener">🪐 SNS星タイプ診断</a>
-      <a class="link-btn" href="https://stationaryobserverno043.github.io/hoshi-shindan/hoshi_seikaku_shindan.html" target="_blank" rel="noopener">🌌 星の性格診断</a>
-      <a class="link-btn" href="https://stationaryobserverno043.github.io/hoshi_monogatari/hoshi_monogatari.html" target="_blank" rel="noopener">🌟 星ヲ巡る旅</a>
+      <a class="link-btn" href="https://stationaryobserverno043.github.io/hoshi-shindan/hoshi_seikaku_shindan.html" target="_blank" rel="noopener">🌌 星の<wbr>性格診断</a>
+      <a class="link-btn" href="https://stationaryobserverno043.github.io/hoshi_monogatari/hoshi_monogatari.html" target="_blank" rel="noopener">🌟 星ヲ巡る<wbr>旅</a>
       <a class="link-btn" href="https://stationaryobserverno043.github.io/memories_odyssey/" target="_blank" rel="noopener">🎮 MEMORIES ODYSSEY</a>
+      <a class="link-btn" href="./apps.html">➕ and more…</a>
     </div>
   </div>
 </section>
@@ -1398,9 +1887,9 @@ nav {
   <div class="container">
     <div class="footer-logo">地球侵略阻止ミッション — Mission Earth Guard</div>
     <div class="footer-note">
-      本サイトは、30代パパの日常をSFテイスト（宇宙人設定）で描く、<br>
-      サイエンス・メタフィクションです。<br>
-      NASAには通報しないでネ⚠️
+      本サイトは、<wbr>30代パパの<wbr>日常を<wbr>SFテイスト<wbr>（宇宙人設定）で<wbr>描く、<br>
+      サイエンス・<wbr>メタフィクションです。<br>
+      NASAには<wbr>通報しないで<wbr>ネ⚠️
     </div>
     <div class="dearly-beloved">👑 Dearly Beloved 🗝️</div>
   </div>
@@ -1441,6 +1930,16 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 document.querySelectorAll('section').forEach(el => observer.observe(el));
+
+// ── TRANSFORM：各コマが画面に入ったらアニメーション開始（1回だけ） ──
+document.querySelectorAll('.flow-stage').forEach(el => {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { el.classList.add('play'); io.disconnect(); }
+    });
+  }, { threshold: 0.5 });
+  io.observe(el);
+});
 </script>
 
 <script>
@@ -1526,7 +2025,8 @@ if (conceptSection) {
 
 // ── 各セクション入場アナウンス ──
 const sectionAnnouncements = {
-  'profile':  '《J.A.C.O》：観測対象のデータを展開——',
+  'about':    '《J.A.C.O》：観測対象のデータを展開——',
+  'future':   '《J.A.C.O》：観測データを、言葉へ変換完了デス——',
   'services': '《J.A.C.O》：地球への介入手段を選択してください——',
   'contact':  '《J.A.C.O》：通信チャンネルを開放中——',
 };
