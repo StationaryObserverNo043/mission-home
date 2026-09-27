@@ -1009,6 +1009,72 @@ nav {
 .pl-sub { font-size: 11px; line-height: 1.6; }
 
 /* ── HERO：ベネフィット＋主CTA ── */
+
+/* ── HERO：新しい軸（AI×3つの力） ── */
+.hero-axis {
+  max-width: 460px;
+  margin: 48px auto 0;
+  text-align: center;
+}
+.hero-axis-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--night-text);
+  line-height: 1.7;
+  margin-bottom: 26px;
+}
+.hero-axis-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  text-align: left;
+  margin-bottom: 26px;
+}
+.hero-axis-list li { position: relative; padding-left: 20px; }
+.hero-axis-list li::before {
+  content: '▷';
+  position: absolute;
+  left: 0;
+  top: 1px;
+  color: var(--night-accent);
+}
+.hero-axis-main {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--night-text);
+  line-height: 1.7;
+}
+.hero-axis-sub {
+  display: block;
+  margin-top: 3px;
+  font-size: 11px;
+  color: var(--night-dim);
+}
+.hero-axis-close {
+  font-size: 16px;
+  font-weight: 700;
+  color: #dcebfa;
+  line-height: 1.8;
+}
+/* ── PROFILE内：地球侵略の定義（伏線回収カード） ── */
+.profile-reveal {
+  margin: 24px 0 28px;
+  padding: 28px 22px;
+  border-radius: 16px;
+  background: radial-gradient(ellipse at 50% 0%, var(--night-panel) 0%, var(--night-bg) 70%);
+  border: 1px solid rgba(245,234,210,0.18);
+}
+.profile-reveal-label {
+  font-family: 'Orbitron', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--night-accent);
+  text-align: center;
+  margin-bottom: 16px;
+}
+.profile-reveal .invasion-note { margin: 0 auto; max-width: 420px; }
 .hero-quote {
   position: relative;
   max-width: 440px;
@@ -1038,7 +1104,7 @@ nav {
 
 .hero-benefit {
   max-width: 480px;
-  margin: 44px auto 0;
+  margin: 64px auto 0;
   font-size: 14px;
   font-weight: 700;
   line-height: 1.9;
@@ -1342,11 +1408,24 @@ body { line-break: strict; overflow-wrap: break-word; word-break: auto-phrase; }
       </picture>
     </div>
     <div class="hero-quote">その正解――<br>本当に<wbr>アナタの<wbr>物語です<wbr>カ？</div>
-    <div class="invasion-note">
-      <div class="inv-title">「地球侵略」――</div>
-      <div class="inv-line">情報過多の<wbr>AI時代。</div>
-      <div class="inv-line">急速な<wbr>グローバル化と、<br>ダイバーシティ。</div>
-      <div class="inv-line">他人や<wbr>AIの<wbr>“正解”に<wbr>飲み込まれて、<br>自分の物語を<wbr>見失っていませんか？</div>
+
+    <div class="hero-axis">
+      <div class="hero-axis-title">AIを<wbr>活用して、<br>あなたの<wbr>暮らしに<wbr>物語を。</div>
+      <ul class="hero-axis-list">
+        <li>
+          <span class="hero-axis-main">AIを<wbr>使ってあなたの<wbr>発信に<wbr>「共感性」を。</span>
+          <span class="hero-axis-sub">→ 作業療法士・<wbr>30代パパとしての<wbr>経験から</span>
+        </li>
+        <li>
+          <span class="hero-axis-main">AIを<wbr>使ってあなたの<wbr>言葉に<wbr>「独自性」を。</span>
+          <span class="hero-axis-sub">→ ライター・<wbr>SF作家としての<wbr>経験から</span>
+        </li>
+        <li>
+          <span class="hero-axis-main">AIを<wbr>使ってあなたの<wbr>思考に<wbr>「形」を<wbr>与える。</span>
+          <span class="hero-axis-sub">→ WEBアプリ・<wbr>世界観構築の<wbr>経験から</span>
+        </li>
+      </ul>
+      <div class="hero-axis-close">3つの力で、<br>あなたの<wbr>「自分らしさ」を<wbr>観測します。</div>
     </div>
     <div class="hero-benefit">
       頭の<wbr>中にあるけど、<wbr>形にならない。<br>
@@ -1779,6 +1858,17 @@ body { line-break: strict; overflow-wrap: break-word; word-break: auto-phrase; }
         <p>正解のない<wbr>世界を<wbr>物語にしてきた<wbr>SF作家。</p>
         <p class="why-close">3つの経験を<wbr>使って、<br>「まだ形になっていないもの」を<br>一緒に<wbr>観測します。</p>
       </div>
+
+      <div class="profile-reveal">
+        <div class="profile-reveal-label">// ミッションコード解読完了</div>
+        <div class="invasion-note">
+          <div class="inv-title">「地球侵略」――</div>
+          <div class="inv-line">情報過多の<wbr>AI時代。</div>
+          <div class="inv-line">急速な<wbr>グローバル化と、<br>ダイバーシティ。</div>
+          <div class="inv-line">他人や<wbr>AIの<wbr>“正解”に<wbr>飲み込まれて、<br>自分の物語を<wbr>見失っていませんか？</div>
+        </div>
+      </div>
+
       <div class="profile-desc">
         精神科・<wbr>身体科・<wbr>小児・<wbr>地域リハビリ——<br>
         多様な<wbr>現場で<wbr>10年以上、<br>
