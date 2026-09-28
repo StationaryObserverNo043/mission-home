@@ -316,9 +316,26 @@ section {
   color: var(--text2);
   line-height: 1.8;
 }
+.profile-desc + .profile-desc { margin-top: 16px; }
+.context-label {
+  font-family: 'Orbitron', monospace;
+  font-size: 10px;
+  color: var(--accent);
+  letter-spacing: 2px;
+  margin: 32px 0 16px;
+}
+.nowrap-unit { white-space: nowrap; }
+.glitch-tag {
+  white-space: nowrap;
+  color: var(--accent3);
+  font-family: 'Orbitron', monospace;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
 
 .profile-data {
-  margin-top: 20px;
+  margin-top: 32px;
   display: grid;
   gap: 8px;
 }
@@ -679,7 +696,7 @@ nav {
   display: grid;
   grid-template-columns: 1fr;
   gap: 8px;
-  margin-top: 20px;
+  margin-top: 32px;
 }
 .stat-note-group {
   border: 1px dashed var(--border2);
@@ -991,7 +1008,7 @@ nav {
 }
 
 /* ── PROFILE内リンク（CTAと競合しないよう控えめに） ── */
-.profile-links { margin-top: 20px; display: flex; flex-direction: column; gap: 10px; }
+.profile-links { margin-top: 32px; display: flex; flex-direction: column; gap: 10px; }
 .profile-link {
   display: flex; flex-direction: column; align-items: center; gap: 2px;
   padding: 12px 16px;
@@ -1060,7 +1077,7 @@ nav {
 }
 /* ── PROFILE内：地球侵略の定義（伏線回収カード） ── */
 .profile-reveal {
-  margin: 24px 0 28px;
+  margin: 32px 0 0;
   padding: 28px 22px;
   border-radius: 16px;
   background: radial-gradient(ellipse at 50% 0%, var(--night-panel) 0%, var(--night-bg) 70%);
@@ -1183,7 +1200,7 @@ nav {
 
 /* ── PROFILE：依頼する理由・経験の中身 ── */
 .profile-why {
-  margin: 4px 0 24px;
+  margin: 4px 0 32px;
   padding: 18px 18px;
   background: rgba(29,99,173,0.05);
   border-left: 3px solid rgba(29,99,173,0.4);
@@ -1859,6 +1876,26 @@ body { line-break: strict; overflow-wrap: break-word; word-break: auto-phrase; }
         <p class="why-close">3つの経験を<wbr>使って、<br>「まだ形になっていないもの」を<br>一緒に<wbr>観測します。</p>
       </div>
 
+      <div class="profile-desc">
+        精神科・<wbr>身体科・<wbr>小児・<wbr>地域リハビリ——<br>
+        多様な<wbr>現場で<wbr>10年以上、<br>
+        作業療法士として<wbr>働いてきました。<br><br>
+        ライティング・<wbr>AI活用・<wbr>SF創作を<wbr>掛け合わせ、<br>
+        地球の<wbr>インターネットに<wbr>潜伏中。<wbr>
+      </div>
+
+      <div class="context-label">▷ HIMAJIN CONTEXT</div>
+      <div class="profile-desc">
+        東北在住。<wbr>愛妻家、<wbr>2児の父。<wbr>
+      </div>
+      <div class="profile-desc">
+        好きなものは、<wbr>アニメ・<wbr>特撮・<wbr>ゲーム・<wbr>マンガ・<wbr>小説・<wbr>図鑑・<wbr>カレーライス・<wbr>温泉・<wbr>森林浴・<wbr>宇宙・<wbr>哲学・<wbr>仏教・<wbr>ディズニー・<span class="nowrap-unit">コスプ<span class="glitch-tag">［ERROR!!］💥💥</span></span>
+      </div>
+      <div class="profile-desc">
+        ――<wbr>アナタの<wbr>好きなものも、<br>
+        ぜひ<wbr>教えてくれると<wbr>嬉しい<wbr>デス🪬✨
+      </div>
+
       <div class="profile-reveal">
         <div class="profile-reveal-label">// ミッションコード解読完了</div>
         <div class="invasion-note">
@@ -1866,33 +1903,6 @@ body { line-break: strict; overflow-wrap: break-word; word-break: auto-phrase; }
           <div class="inv-line">情報過多の<wbr>AI時代。</div>
           <div class="inv-line">急速な<wbr>グローバル化と、<br>ダイバーシティ。</div>
           <div class="inv-line">他人や<wbr>AIの<wbr>“正解”に<wbr>飲み込まれて、<br>自分の物語を<wbr>見失っていませんか？</div>
-        </div>
-      </div>
-
-      <div class="profile-desc">
-        精神科・<wbr>身体科・<wbr>小児・<wbr>地域リハビリ——<br>
-        多様な<wbr>現場で<wbr>10年以上、<br>
-        作業療法士として<wbr>働いてきました。<br><br>
-        ライティング・<wbr>AI活用・<wbr>SF創作を<wbr>掛け合わせ、<br>
-        地球の<wbr>インターネットに<wbr>潜伏中。<br><br>
-        東北在住。<wbr>愛妻家、<wbr>2児の父。<wbr>三度の飯より<wbr>カレーライスが<wbr>好きデス🪬🧬
-      </div>
-      <div class="profile-data">
-        <div class="data-row">
-          <span class="data-key">LOCATION</span>
-          <span class="data-val">日本・<wbr>東北 ／ ゼド星系・<wbr>第5惑星ノギリア</span>
-        </div>
-        <div class="data-row">
-          <span class="data-key">MISSION</span>
-          <span class="data-val">育児 × 家事 × WEBライター × 地球防衛<wbr>（SF）</span>
-        </div>
-        <div class="data-row">
-          <span class="data-key">ENERGY</span>
-          <span class="data-val">特撮 / アニメ / 小説 / カレーライス</span>
-        </div>
-        <div class="data-row">
-          <span class="data-key">STATUS</span>
-          <span class="data-val">30代 / 2児の<wbr>父 / SNS多層コンテンツ<wbr>「地球侵略阻止ミッション」<wbr>展開中</span>
         </div>
       </div>
       <div class="stats-grid">
