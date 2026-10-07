@@ -5,12 +5,11 @@
          オフライン時のみキャッシュにフォールバックする。
 ════════════════════════════════════════ */
 
-const CACHE_NAME = 'himajin-portfolio-v1';
+const CACHE_NAME = 'himajin-portfolio-v2';
 const APP_SHELL = [
   './portfolio.html',
   './manifest-portfolio.json',
   './icon-portfolio-192.png',
-  './icon-portfolio-512.png',
 ];
 
 self.addEventListener('install', (event) => {

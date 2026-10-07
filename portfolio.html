@@ -1842,7 +1842,7 @@ footer{border-top:1px solid var(--border);padding:40px 0;text-align:center;posit
 /* ════ PWA: Service Worker登録（ホーム画面への追加を可能にする） ════ */
 if('serviceWorker' in navigator){
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./sw-portfolio.js').catch(()=>{
+    navigator.serviceWorker.register('./sw-portfolio.js', { scope: './portfolio.html' }).catch(()=>{
       /* 登録失敗時もページ表示自体には影響させない */
     });
   });
