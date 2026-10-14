@@ -1,0 +1,16 @@
+{
+  "id": "/mission-home/apps.html",
+  "name": "GADGET HANGAR｜地球防衛ガジェット格納庫",
+  "short_name": "GADGET HANGAR",
+  "description": "恒点観測員043号が開発した地球防衛ガジェット群。スマホ完結のブラウザアプリ一覧。",
+  "lang": "ja",
+  "start_url": "/mission-home/apps.html",
+  "scope": "/mission-home/",
+  "display": "standalone",
+  "background_color": "#01040a",
+  "theme_color": "#01040a",
+  "icons": [
+    { "src": "gadget-icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "gadget-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}
